@@ -4,6 +4,7 @@ import About from "./about";
 import Works from "./services";
 import Contact from "./contact";
 import Latest from "./latest";
+import Skills from "@/components/Skills";
 
 export default function Index() {
   return (
@@ -19,6 +20,7 @@ export default function Index() {
         <div className="py-20 relative w-full bg-[url('../public/wallpaper.jpg')] bg-fixed bg-cover bg-no-repeat bg-bottom">
           <Works />
         </div>
+        <Skills/>
       </div>
       <div id="works" className="py-20">
         <Latest />

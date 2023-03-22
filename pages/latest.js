@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import mobile from "../public/web4.png";
-import web_development from "../public/web1.png";
+import ecommerce from "../public/ecom.png";
 import design_tool from "../public/web2.png";
 
 const Latest = () => {
@@ -16,7 +16,7 @@ const Latest = () => {
               </h1>
             </div>
             <p className="py-5 px-32 leading-6 text-sm text-gray-500 text-center">
-              Below are my interesting projects I've working on so far and happy
+              Below are my interesting projects I have working on so far and happy
               to share. Including Designs, web development and Mobile
               development{" "}
             </p>
@@ -51,11 +51,11 @@ const Latest = () => {
             <div className="py-2 font-medium text-white">UI Design</div>
           </div>
           <div className="flex flex-col items-center shadow rounded-md bg-[#083d49e1] justify-between ">
-            <Image src={web_development} alt="" />
-            <div className="py-2 font-medium text-white">UI Design</div>
+            <Image src={ecommerce} alt="" />
+            <div className="py-2 font-medium text-white">e-commerce full stack web app</div>
           </div>
           <div className="flex flex-col items-center shadow rounded-md bg-[#083d49e1] justify-between ">
-            <Image src={web_development} alt="" />
+            <Image src={ecommerce} alt="" />
             <div className="py-2 font-medium text-white">UI Design</div>
           </div>
         </div>

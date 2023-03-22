@@ -11,7 +11,7 @@ const Home = () => {
               Hello,
             </h3>
             <h2 className="text-2xl font-montserrat font-medium text-[#000]  dark:text-white md:text-4xl">
-              I'm{" "}
+              I'm
               <span className="dark:text-white  md:text-5xl ">
                 <span className="text-[#ff0062]">Gatwech</span> Tap
               </span>
