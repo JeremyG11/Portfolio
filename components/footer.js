@@ -15,7 +15,7 @@ const Footer = () => {
       <div className="flex flex-col justify-center items-center ">
         <div className="mx-20 px-20 text-center text-4xl font-black">G.</div>
         <p className=" text-gray-600 mx-20 px-20 text-center text-xs font-light w-[500px] leading-5 ">
-          Lorem Ipsum has been the industry's standard dummy text ever since the
+          Lorem Ipsum has been the industry standard dummy text ever since the
           1500s
         </p>
         <div className="py-5 ">

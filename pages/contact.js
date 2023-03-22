@@ -96,7 +96,7 @@ const Contact = () => {
               <div></div>
             )}
               <p className="mt-5 font-montserrat text-sm font-medium text-[#18a]">
-                Send me a message and I'll be back to you in no time
+                Send me a message and I will be back to you in no time
               </p>
             </div>
             <div className="w-full my-5 relative ">
