@@ -65,9 +65,14 @@ const Navigation = ({ darkMode, setDarkMode }) => {
   return (
     <>
       <nav
-        className={`${stickyClass}  md:px-40 z-50 bg-white w-[100%] md:w-auto left-0 flex items-center font-montserrat mb-10 py-2 lg:flex md:justify-between  dark:bg-gray-900 dark:text-white `}
+        className={`${stickyClass}  md:px-40 z-50 bg-white w-[100%] md:w-auto left-0 flex items-center font-montserrat py-2 lg:flex md:justify-between  dark:bg-gray-900 dark:text-white `}
       >
-        <span className="pl-6 md:pl-0 font-bold e">DJmewcc</span>
+        <span className="pl-6 md:pl-0 font-bold ">
+          {" "}
+          <div className="mx-20 px-20 text-4xl font-black">
+            <span className="text-[#ff0063]">?.</span>G
+          </div>
+        </span>
         <ul
           className={` w-[100%] px-6 pb-6 md:p-0 bg-[#fff] shadow md:shadow-none dark:bg-gray-900 z-100 absolute md:static md:w-auto md:flex items-center md:justify-between ${
             active ? "top-12" : "top-[-400px]"
@@ -88,51 +93,55 @@ const Navigation = ({ darkMode, setDarkMode }) => {
               </Link>
             </li>
             <li className="relative pt-2 md:pt-0 mx-6">
-              <Link href="/#about" scroll={false}
-                  className={`${
-                    activeLink === "about"
-                      ? "text-[#D31717] cursor-pointer py-3 font-medium after:content-[''] after:absolute after:w-[50%] after:h-[2px] after:bg-[#D31717]"
-                      : "text-black dark:text-white"
-                  }  font-montserrat font-medium text-sm cursor-pointer py-3 relative after:absolute after:content-[''] hover:after:w-[50%] after:h-[2px] after:bg-[#D31717] after:bottom-2 after:left-0`}
-                >
-                  About me
-                
+              <Link
+                href="/#about"
+                scroll={false}
+                className={`${
+                  activeLink === "about"
+                    ? "text-[#D31717] cursor-pointer py-3 font-medium after:content-[''] after:absolute after:w-[50%] after:h-[2px] after:bg-[#D31717]"
+                    : "text-black dark:text-white"
+                }  font-montserrat font-medium text-sm cursor-pointer py-3 relative after:absolute after:content-[''] hover:after:w-[50%] after:h-[2px] after:bg-[#D31717] after:bottom-2 after:left-0`}
+              >
+                About me
               </Link>
             </li>
             <li className="relative pt-2 md:pt-0 mx-6">
-              <Link href="/#services" scroll={false} 
-                  className={`${
-                    activeLink === "services"
-                      ? "text-[#D31717] cursor-pointer py-3 relative font-medium after:content-[''] after:absolute after:w-[50%] after: after:h-[2px] after:bg-[#D31717]"
-                      : "text-black dark:text-white"
-                  }  font-montserrat font-medium text-sm cursor-pointer py-3 relative after:content-[''] after:absolute  hover:after:w-[50%] after:h-[2px] after:bg-[#D31717] after:bottom-2 after:left-0`}
-                >
-                  Services
-               
+              <Link
+                href="/#services"
+                scroll={false}
+                className={`${
+                  activeLink === "services"
+                    ? "text-[#D31717] cursor-pointer py-3 relative font-medium after:content-[''] after:absolute after:w-[50%] after: after:h-[2px] after:bg-[#D31717]"
+                    : "text-black dark:text-white"
+                }  font-montserrat font-medium text-sm cursor-pointer py-3 relative after:content-[''] after:absolute  hover:after:w-[50%] after:h-[2px] after:bg-[#D31717] after:bottom-2 after:left-0`}
+              >
+                Services
               </Link>
             </li>
             <li className="relative pt-2 md:pt-0 mx-6">
-              <Link href="/#works" scroll={false} 
-                  className={`${
-                    activeLink === "works"
-                      ? "text-[#D31717] cursor-pointer py-3 relative font-medium after:content-[''] after:absolute after:w-[50%] after: after:h-[2px] after:bg-[#D31717]"
-                      : "text-black dark:text-white"
-                  }  font-montserrat font-medium text-sm cursor-pointer py-3 relative after:content-[''] after:absolute  hover:after:w-[50%] after:h-[2px] after:bg-[#D31717] after:bottom-2 after:left-0`}
-                >
-                  Portfolio
-             
+              <Link
+                href="/#works"
+                scroll={false}
+                className={`${
+                  activeLink === "works"
+                    ? "text-[#D31717] cursor-pointer py-3 relative font-medium after:content-[''] after:absolute after:w-[50%] after: after:h-[2px] after:bg-[#D31717]"
+                    : "text-black dark:text-white"
+                }  font-montserrat font-medium text-sm cursor-pointer py-3 relative after:content-[''] after:absolute  hover:after:w-[50%] after:h-[2px] after:bg-[#D31717] after:bottom-2 after:left-0`}
+              >
+                Portfolio
               </Link>
             </li>
             <li className="relative pt-2 md:pt-0 mx-6">
-              <Link href="/#contact" scroll={false} 
-                  className={`${
-                    activeLink === "contact"
-                      ? "text-[#D31717] cursor-pointer py-3 relative after:content-[''] after:absolute after:w-[50%] after:h-[2px] after:bg-[#D31717]"
-                      : "text-black dark:text-white"
-                  }   font-montserrat font-medium text-sm cursor-pointer py-3 relative after:content-[''] after:absolute hover: hover:after:w-[50%] after:h-[2px] after:bg-[#D31717] after:bottom-2 after:left-0`}
-                >
-                  Contact me
-            
+              <Link
+                href="/#contact"
+                scroll={false}
+                className={`${
+                  activeLink === "contact"
+                    ? "text-[#D31717] cursor-pointer py-3 relative after:content-[''] after:absolute after:w-[50%] after:h-[2px] after:bg-[#D31717]"
+                    : "text-black dark:text-white"
+                }   font-montserrat font-medium text-sm cursor-pointer py-3 relative after:content-[''] after:absolute hover: hover:after:w-[50%] after:h-[2px] after:bg-[#D31717] after:bottom-2 after:left-0`}
+              >
+                Contact me
               </Link>
             </li>
 

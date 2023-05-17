@@ -14,96 +14,192 @@ import mysqlIcon from "../public/mysql.svg";
 import python from "../public/python.svg";
 const Skills = () => {
   return (
-    <div className=" bg-#fff text-black py-8 ">
-      <div className="flex justify-center">
-        <h1 className="py-3 relative text- text-center font-medium after:content-[''] after:absolute after:w-16 after:h-[3px] after:bg-[#ff0062] after:bottom-0 after:left-0">
-          Skills and Experience
-        </h1>
+    <section className="text-gray-600 body-font lg:mx-40">
+      <div className="container px-5 py-24 mx-auto">
+        <div className="flex flex-wrap -m-4">
+          <div className="p-4 lg:w-1/3">
+            <div className="h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+              <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                CATEGORY
+              </h2>
+              <h1 className="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
+                Raclette Blueberry Nextious Level
+              </h1>
+              <p className="leading-relaxed mb-3">
+                Photo booth fam kinfolk cold-pressed sriracha leggings jianbing
+                microdosing tousled waistcoat.
+              </p>
+              <a className="text-indigo-500 inline-flex items-center">
+                Learn More
+                <svg
+                  className="w-4 h-4 ml-2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+              <div className="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
+                <span className="text-gray-400 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                  <svg
+                    className="w-4 h-4 mr-1"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  1.2K
+                </span>
+                <span className="text-gray-400 inline-flex items-center leading-none text-sm">
+                  <svg
+                    className="w-4 h-4 mr-1"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                  </svg>
+                  6
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className="p-4 lg:w-1/3">
+            <div className="h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+              <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                CATEGORY
+              </h2>
+              <h1 className="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
+                Ennui Snackwave Thundercats
+              </h1>
+              <p className="leading-relaxed mb-3">
+                Photo booth fam kinfolk cold-pressed sriracha leggings jianbing
+                microdosing tousled waistcoat.
+              </p>
+              <a className="text-indigo-500 inline-flex items-center">
+                Learn More
+                <svg
+                  className="w-4 h-4 ml-2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+              <div className="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
+                <span className="text-gray-400 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                  <svg
+                    className="w-4 h-4 mr-1"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  1.2K
+                </span>
+                <span className="text-gray-400 inline-flex items-center leading-none text-sm">
+                  <svg
+                    className="w-4 h-4 mr-1"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                  </svg>
+                  6
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className="p-4 lg:w-1/3">
+            <div className="h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+              <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                CATEGORY
+              </h2>
+              <h1 className="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
+                Selvage Poke Waistcoat Godard
+              </h1>
+              <p className="leading-relaxed mb-3">
+                Photo booth fam kinfolk cold-pressed sriracha leggings jianbing
+                microdosing tousled waistcoat.
+              </p>
+              <a className="text-indigo-500 inline-flex items-center">
+                Learn More
+                <svg
+                  className="w-4 h-4 ml-2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+              <div className="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
+                <span className="text-gray-400 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                  <svg
+                    className="w-4 h-4 mr-1"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  1.2K
+                </span>
+                <span className="text-gray-400 inline-flex items-center leading-none text-sm">
+                  <svg
+                    className="w-4 h-4 mr-1"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                  </svg>
+                  6
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="lg:px-40 py-8 grid grid-cols-3 gap-10">
-        <div className="grid grid-cols-3 border p-8 rounded ">
-          <div className="h-20 w-20 rounded-md flex flex-col items-center justify-around">
-            <div>
-              <Image src={htmlIcon} alt="" />
-            </div>
-            <p className="text-xs text-gray-500 font-medium">HTML 5</p>
-          </div>
-          <div className="h-20 w-20 rounded-md flex flex-col items-center justify-around">
-            <div>
-              <Image src={css3} alt="" />
-            </div>
-            <p className="text-xs text-gray-500 font-medium">CSS 3</p>
-          </div>
-          <div className="h-20 w-20 rounded-md flex flex-col items-center justify-around">
-            <div>
-              <Image src={js} alt="" />
-            </div>
-            <p className="text-xs text-gray-500 font-medium">JavaScript</p>
-          </div>
-          <div className="h-20 w-20 rounded-md flex flex-col items-center justify-around">
-            <div>
-              <Image src={python} alt="" />
-            </div>
-            <p className="text-xs text-gray-500 font-medium">Python</p>
-          </div>
-        </div>
-        <div className="grid grid-cols-3 border p-8 rounded ">
-          <div className="h-20 w-20 rounded-md flex flex-col items-center justify-around">
-            <div>
-              <Image src={reactjsicon} alt="" />
-            </div>
-            <p className="text-xs text-gray-500 font-medium">React Js</p>
-          </div>
-          <div className="h-20 w-20 rounded-md flex flex-col items-center justify-around">
-            <div>
-              <Image src={tailwindCSS} alt="" />
-            </div>
-            <p className="text-xs text-gray-500 font-medium">Tailwind CSS</p>
-          </div>
-          <div className="h-20 w-20 rounded-md flex flex-col items-center justify-around">
-            <div>
-              <Image src={nodejsIcon} alt="" />
-            </div>
-            <p className="text-xs text-gray-500 font-medium">Node js</p>
-          </div>
-          <div className="h-20 w-20 rounded-md flex flex-col items-center justify-around">
-            <div>
-              <Image src={djangoIcon} alt="" />
-            </div>
-            <p className="text-xs text-gray-500 font-medium">Django</p>
-          </div>
-        </div>
-        <div className="grid grid-cols-3 border p-8 rounded ">
-          <div className="h-20 w-20 rounded-md flex flex-col items-center justify-around">
-            <div>
-              <Image src={mongodbIcon} alt="" />
-            </div>
-            <p className="text-xs text-gray-500 font-medium">MongoDB</p>
-          </div>
-          <div className="h-20 w-20 rounded-md flex flex-col items-center justify-around">
-            <div>
-              <Image src={mysqlIcon} alt="" />
-            </div>
-            <p className="text-xs text-gray-500 font-medium">MySQL</p>
-          </div>
-        </div>
-        <div className="grid grid-cols-3 border p-8 rounded ">
-          <div className="h-20 w-20 rounded-md flex flex-col items-center justify-around">
-            <div>
-              <Image src={gitIcon} alt="" />
-            </div>
-            <p className="text-xs text-gray-500 font-medium">Git</p>
-          </div>
-          <div className="h-20 w-20 rounded-md flex flex-col items-center justify-around">
-            <div>
-              <Image src={dockerIcon} alt="" />
-            </div>
-            <p className="text-xs text-gray-500 font-medium">Docker</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    </section>
   );
 };
-
 export default Skills;
