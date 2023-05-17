@@ -10,7 +10,7 @@ import Testimonials from "@/components/Testimonials";
 export default function Index() {
   return (
     <div>
-      <section id="home" className="text-gray-600 body-font lg:mx-40">
+      <section id="home" className="text-gray-600 body-font xl:mx-40">
         <div className="container mx-auto flex py-24 md:flex-row flex-col items-center">
           <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
             <h3 className="text-lg md:2xl lg:text-2xl py-1 font-montserrat">

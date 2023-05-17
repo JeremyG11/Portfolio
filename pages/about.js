@@ -3,23 +3,7 @@ import Image from "next/image";
 import avatar from "../public/avatar.png";
 const About = () => {
   return (
-    // <main className="grid grid-cols-2 mt-20 font-montserrat  px-8 md:px-20 py-20 lg:px-40">
-    //   <div className="p-4 relative bg-red-500 w-60">
-    //     <div className=" bg-gray-200 absolute left-4  w-96 h-80">
-    //       <div className="w-[100%] h-[100%]">
-    //         <Image src={avatar} width={385} height={350} alt="" />
-    //       </div>
-    //     </div>
-    //   </div>
-    //   <div className="px-0 dark:text-white ">
-
-    //     <div className="my-5 font-montserrat">
-    //       <button className="w-32 p-2 md:w-36 border-2 border-[#ff0062] hover:bg-[#ff0062] transition duration-500 md:px-3 md:py-3 text-sm">
-    //         Download CV
-    //       </button>
-    //     </div>
-    //   </div>
-    <section className="text-gray-600 body-font lg:mx-40">
+    <section className="text-gray-600 body-font xl:mx-40">
       <div className="container mx-auto flex py-24 md:flex-row flex-col items-center">
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
           <img

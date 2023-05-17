@@ -14,7 +14,7 @@ import mysqlIcon from "../public/mysql.svg";
 import python from "../public/python.svg";
 const Skills = () => {
   return (
-    <section className="text-gray-600 body-font lg:mx-40">
+    <section className="text-gray-600 body-font xl:mx-40">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-wrap -m-4">
           <div className="p-4 lg:w-1/3">

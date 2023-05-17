@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Head from "next/head";
 import Navigation from "./Navigation";
 import Footer from "./footer";
+import Navbar from "./Navbar";
 
 const Layout = ({ children }) => {
   const [darkMode, setDarkMode] = useState(false);
@@ -14,7 +15,7 @@ const Layout = ({ children }) => {
       </Head>
       <main className=" bg-white dark:bg-gray-900">
         <section className="min-h-screen">
-          <Navigation darkMode={darkMode} setDarkMode={setDarkMode} />
+          <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
           {children}
         </section>
       </main>

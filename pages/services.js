@@ -14,14 +14,14 @@ const Works = () => {
     //   }}
     // >
     //   <div className=" flex flex-col items-center justify-center">
-    //     <h1 className=" py-3 relative text-3xl font-medium text-white after:content-[''] after:absolute after:w-16 after:h-[3px] after:bg-[#ff0062] after:bottom-0 after:left-0">
-    //       Services
-    //     </h1>
-    //     <p className="px-6 py-8 md:px-32 text-center text-gray-300 ">
-    //       Select your favorite social network and share our icons with your
-    //       contacts or friends. If you don’t have these social networks, simply
-    //       copy the link and paste it in the one you use.{" "}
-    //     </p>
+    // <h1 className=" py-3 relative text-3xl font-medium text-white after:content-[''] after:absolute after:w-16 after:h-[3px] after:bg-[#ff0062] after:bottom-0 after:left-0">
+    //   Services
+    // </h1>
+    // <p className="px-6 py-8 md:px-32 text-center text-gray-300 ">
+    //   Select your favorite social network and share our icons with your
+    //   contacts or friends. If you don’t have these social networks, simply
+    //   copy the link and paste it in the one you use.{" "}
+    // </p>
     //   </div>
     //   <div className="px-20 py-10  grid grid-cols-1 md:grid-cols-3 md:px-0  gap-10">
     //     <div className="flex flex-col items-center shadow p-8 rounded-md bg-[#083d49e1] justify-between ">
@@ -60,13 +60,15 @@ const Works = () => {
     // </div>
     <section class="text-gray-600 body-font xl:mx-40">
       <div class="container px-5 py-24 mx-auto">
-        <div class="flex flex-col text-center w-full mb-20">
-          <h2 class="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1">
-            ROOF PARTY POLAROID
-          </h2>
-          <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900">
-            Master Cleanse Reliac Heirloom
+        <div class="flex flex-col text-center justify-center mb-20">
+          <h1 className=" py-3 relative text-3xl font-medium text-gray-500 after:content-[''] after:absolute after:w-16 after:h-[3px] after:bg-[#ff0062] after:bottom-0 after:left-0">
+            Services
           </h1>
+          <p className="px-6 py-8 md:px-32 text-center text-gray-500 ">
+            Select your favorite social network and share our icons with your
+            contacts or friends. If you don't have these social networks, simply
+            copy the link and paste it in the one you use.
+          </p>
         </div>
         <div class="flex flex-wrap -m-4">
           <div class="p-4 md:w-1/3">
