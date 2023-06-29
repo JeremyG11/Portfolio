@@ -1,6 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { ImDownload } from "react-icons/im";
+
 import ThemeButton from "../Elements/ThemeButton";
 const Navbar = () => {
   const navElements = [
@@ -86,7 +88,7 @@ const Navbar = () => {
                 ></label>
 
                 <div
-                  className={`flex z-50 flex-col md:flex-row justify-between md:items-center gap-y-4 p-6 bg-white md:w-8/12 md:gap-y-4 md:p-0 md:bg-transparent lg:w-7/12 fixed top-0 ${
+                  className={`flex z-50 flex-col md:flex-row justify-between md:items-center gap-y-4 p-6 bg-white md:w-8/12 md:gap-y-4 md:p-0 md:bg-transparent lg:w-9/12 fixed top-0 ${
                     toggleNav ? "left-0" : "-left-full"
                   } transition-all duration-500 peer-checked:left-0 max-w-sm h-full md:left-0 md:h-auto w-4/5 md:max-w-none md:relative lg:first-letter:top-0`}
                 >
@@ -102,33 +104,39 @@ const Navbar = () => {
                     </a>
                   </div>
                   <div className="block w-full h-full md:h-auto">
-                    <ul className="space-y-8 tracking-wide font-medium md:flex md:space-y-0">
+                    <ul className="space-y-8  tracking-wide font-medium md:flex md:space-y-0">
                       {navElements.map((item, indx) => {
                         return (
-                          <li key={indx}>
-                            <a href="#" className="block md:px-3 group">
+                          <li
+                            key={indx}
+                            className="mx-4 uppercase font-normal text-sm "
+                          >
+                            <Link href="#" className="block md:px-3 group">
                               <div className="relative text-gray-600 before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left dark:before:bg-yelloe-500 before:mx-auto before:mt-auto before:rounded-full before:bg-yellow-800 before:transition before:scale-x-0 group-hover:before:scale-x-100">
                                 <span className="transition group-hover:text-yellow-700 dark:text-gray-300 dark:group-hover:text-yellow-300">
                                   {item.name}
                                 </span>
                               </div>
-                            </a>
+                            </Link>
                           </li>
                         );
                       })}
                     </ul>
                   </div>
-                  <div className="w-full gap-y-4 md:w-max md:gap-y-0 md:gap-x-4 flex md:flex-row flex-col">
+                  <div className="w-full gap-y-4 md:w-max md:gap-y-0 md:gap-x-4 flex md:flex-row flex-col font-montserrat">
                     <ThemeButton />
-                    <button
-                      type="button"
-                      title="Start buying"
-                      className="w-full py-3 px-6 text-center transition dark:bg-gray-700 bg-gray-900 hover:bg-gray-800 active:bg-gray-700 focus:bg-gray-800 md:w-max"
+                    <a
+                      className="group rounded-sm flex flex-row-reverse items-center justify-center gap-3 border border-black bg-black px-8 py-3 transition-colors hover:bg-gray-100 focus:outline-none"
+                      href="/download"
                     >
-                      <span className="block text-white font-semibold">
+                      <span className="font-medium shrink-0 text-sm  text-white transition-colors group-hover:text-black group-active:text-black">
                         Download CV
                       </span>
-                    </button>
+
+                      <span className="shrink-0 rounded-full  text-white group-hover:text-black  group-active:text-black">
+                        <ImDownload className="group-active:text-black" />
+                      </span>
+                    </a>
                   </div>
                 </div>
               </div>

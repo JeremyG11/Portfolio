@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        hero: "url('../public/back1.png')",
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
       },
       fontFamily: {
         burtons: "burtons",
@@ -17,6 +17,9 @@ module.exports = {
         montserrat: ["Montserrat", "sans-serif "],
         nunito: ["Nunito Sans", "sans-serif"],
         reem: ["Reem Kufi", "sans-serif"],
+        raleway: ["Raleway", "sans-serif"],
+        opensan: ["Open Sans", "sans-serif"],
+        assistant: ["Assistant", "sans-serif"],
       },
     },
   },

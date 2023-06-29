@@ -1,42 +1,50 @@
 import React from "react";
+import { ImDownload } from "react-icons/im";
 
 const About = () => {
   return (
-    <section className="text-gray-600 body-font px-4 md:px-16">
+    <section className="text-gray-600 font-montserrat px-4 py-16 md:px-16">
       <div className="container mx-auto flex py-24 md:flex-row flex-col items-center">
-        <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-          <img
-            className="object-cover object-center rounded"
-            alt="hero"
-            src="https://dummyimage.com/720x600"
-          />
-        </div>
-        <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-          <h2
-            className="relative text-2xl dark:text-white
-        after:content-[''] after:absolute after:w-16 after:h-[3px] after:bg-[#ff0062] after:-bottom-1 after:left-0"
-          >
+        <div className="relative dark:text-gray-300 lg:flex-grow md:max-w-xl text-lg lg:pl-16 md:pl-8 flex flex-col md:items-start md:text-left items-center text-center">
+          <h2 className="text-center relative text-2xl dark:text-white pl-5 before:content-[''] before:absolute before:w-[3px] rounded-lg before:mr-2 before:h-10 uppercase before:bg-[#ff0062] before:-bottom-1 before:left-0">
             About Me
           </h2>
-          <p className="mt-4 text-sm py-4 space-x-10 leading-6 font-light text-gray-700 dark:text-gray-100">
-            I am a skilled junior web developer with a passion for creating
-            elegant, modern, user-friendly websites. With 2 years of experience
-            in the industry, I have honed my skills in front-end and back-end
-            development, as well as in UX/UI design.
+          <p className="my-5 italic text-sm">
+            I'm a skilled junior Full Stack Developer based in Addis Ababa,
+            Ethiopia
           </p>
-          <p className="text-sm leading-6 font-light ">
+          <p className="mt-4 text-base leading-7 font-assistant text-gray-500 dark:text-gray-300">
+            Passioned for creating elegant, modern, user-friendly websites. With
+            3 years of experience in the industry, I have honed my skills in
+            front-end and back-end development, as well as in UX/UI design.
+            <br />
             Please take a look at my portfolio to see examples of my work and
             feel free to contact me if you have any questions or if you are
             interested in working together.
           </p>
-          <div className="flex justify-center">
+
+          <div className="mt-4 flex justify-center">
             <div className="my-5 font-montserrat">
-              <button className="w-32 p-2 md:w-36 border-2 border-[#ff0062] hover:bg-[#ff0062] transition duration-500 md:px-3 md:py-3 text-sm">
-                Download CV
-              </button>
+              <a
+                className="group rounded-sm flex flex-row-reverse items-center justify-between gap-3 border border-black bg-black px-8 py-3 transition-colors hover:bg-gray-100 focus:outline-none"
+                href="/download"
+              >
+                <span className="font-medium text-sm  text-white transition-colors group-hover:text-black group-active:text-black">
+                  Download CV
+                </span>
+
+                <span className="shrink-0 rounded-full  text-white group-hover:text-black  group-active:text-black">
+                  <ImDownload className="group-active:text-black" />
+                </span>
+              </a>
             </div>
           </div>
         </div>
+        {/* <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+          <div className="mx-auto invisible md:visible bg-gradient-to-b from-teal-500  w-80 h-80 rounded-full overflow-hidden md:h-96 md:w-96">
+            <h3>IMAGE</h3>
+          </div>
+        </div> */}
       </div>
     </section>
   );

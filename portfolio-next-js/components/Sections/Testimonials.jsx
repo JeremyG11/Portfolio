@@ -1,39 +1,39 @@
 import React from "react";
+import { LiaQuoteLeftSolid } from "react-icons/lia";
+import Swipper from "../Elements/Swipper";
+import TestimonialCard from "../Elements/TestimonialCard";
+import SwipperXl from "../Elements/SwipperXl";
 
 const Testimonials = () => {
   return (
-    <section className="text-gray-600 body-font px-4 md:px-16">
-      <div className="container px-5 py-24 mx-auto">
-        <div className="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            className="inline-block w-24 h-24 text-[#ff0063] mb-8"
-            viewBox="0 0 975.036 975.036"
-          >
-            <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
-          </svg>
-          <p className="leading-relaxed text-lg">
-            Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki
-            taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman
-            taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid
-            fanny pack vaporware.
-          </p>
-          <div className="inline-flex items-center mt-5">
-            <img
-              alt="blog"
-              src="https://dummyimage.com/103x103"
-              className="w-16 h-16 rounded-full flex-shrink-0 object-cover object-center"
-            />
-            <span className="flex-grow flex flex-col pl-4">
-              <span className="title-font font-medium text-gray-900">
-                Didier Drogba
-              </span>
-              <span className="text-gray-400 text-xs tracking-widest mt-0.5">
-                DESIGNER
-              </span>
-            </span>
+    <section className="bg-gray-50 px-4 md:px-16 dark:bg-gray-900">
+      <div className="mx-auto max-w-[1340px] px-4 py-16 sm:px-6 sm:py-24 lg:me-0 lg:pe-0 lg:ps-8">
+        <div className="grid grid-cols-1 gap-y-8 lg:grid-cols-3 lg:items-center lg:gap-x-12">
+          <div className="max-w-xl ltr:sm:text-left rtl:sm:text-right bg-gray-200 dark:bg-gray-800 p-8 opacity-80">
+            <h2 className=" relative text-2xl dark:text-white pl-5 before:content-[''] before:absolute before:w-[3px] rounded-lg before:mr-2 before:h-10 uppercase before:bg-[#ff0062] before:-bottom-1 before:left-0">
+              Testimonials
+            </h2>
+            <p className="my-5 italic text-sm">
+              Don't just take my words for it. see the comments and reviews
+            </p>
+            <p className="mt-4 text-base leading-7 font-assistant text-gray-500 dark:text-gray-300">
+              Passioned for creating elegant, modern, user-friendly websites.
+              With 3 years of experience in the industry, I have honed my skills
+              in
+            </p>
+
+            <SwipperXl />
           </div>
+          <div className="w-full col-span-2 overflow-hidden flex gap-6">
+            <div className="relative flex items-center justify-center w-full dark:text-gray-50">
+              <div className="flex items-center justify-start w-full h-full gap-6 py-4 mx-auto overflow-hidden lg:gap-8">
+                <TestimonialCard />
+                <TestimonialCard />
+                <TestimonialCard />
+              </div>
+            </div>
+          </div>
+          <Swipper />
         </div>
       </div>
     </section>
