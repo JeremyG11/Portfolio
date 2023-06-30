@@ -33,7 +33,7 @@ const SkillsAndExperience = () => {
               />
             </svg>
           </div>
-          <h6 className="mb-2 font-semibold leading-5">Designs and Frontend</h6>
+          <h6 className="mb-2 font-semibold font-assistant leading-5">Designs and Frontend</h6>
 
           <ul className="mb-4 -ml-1 space-y-2">
             <li className="flex items-center">
@@ -46,13 +46,13 @@ const SkillsAndExperience = () => {
               <span className="mr-1 p-2 bg-slate-100 rounded-full">
                 <TbBrandNextjs />
               </span>
-              <p className="ml-4">Tailwind CSS</p>
+              <p className="ml-4">Next JS</p>
             </li>
             <li className="flex items-center">
               <span className="mr-1 p-2 bg-slate-100 rounded-full">
                 <SiReact />
               </span>
-              <p className="ml-4">Tailwind CSS</p>
+              <p className="ml-4">React JS</p>
             </li>
             <li className="flex items-center">
               <span className="mr-1 p-2 bg-slate-100 rounded-full">

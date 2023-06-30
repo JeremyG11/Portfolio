@@ -7,7 +7,18 @@ import Services from "@/components/Sections/Services";
 import Testimonials from "@/components/Sections/Testimonials";
 import SkillsAndExperience from "@/components/Sections/SkillsAndExperience";
 
-export default function Home() {
+async function getUsers() {
+  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/?limit=5`);
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  return res.json();
+}
+
+export default async function Home() {
+  const testimonials = await getUsers();
   return (
     <>
       <div className="mt-32 px-4 md:px-16">
@@ -26,17 +37,12 @@ export default function Home() {
               needs. Join me down below and let get cracking!
             </p>
             <div className="my-5 font-montserrat">
-              <button
-                 
-                className="group rounded-sm flex items-center justify-between gap-3 border border-black bg-black px-8 py-2 transition-colors hover:bg-gray-100 focus:outline-none focus:ring"
-              >
+              <button className="group rounded-sm flex items-center justify-between gap-3 border border-black bg-black px-8 py-2 transition-colors hover:bg-gray-100 focus:outline-none focus:ring">
                 <span className="uppercase text-white transition-colors group-hover:text-black group-active:text-black">
                   Hire Me
                 </span>
 
-                <span className="shrink-0 rounded-full  text-white group-hover:text-black  group-active:text-black">
-                  
-                </span>
+                <span className="shrink-0 rounded-full  text-white group-hover:text-black  group-active:text-black"></span>
               </button>
             </div>
             <div className="py-4">
@@ -133,7 +139,7 @@ export default function Home() {
       <Services />
       <SkillsAndExperience />
       <Portfolio />
-      <Testimonials />
+      <Testimonials testimonials={testimonials} />
       <Contact />
     </>
   );

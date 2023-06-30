@@ -46,7 +46,7 @@ const Contact = () => {
 
   useEffect(() => {}, [message]);
   return (
-    <section className=" my-16 px-4 md:px-16 bg-gray-50 dark:bg-gray-800 mt-10">
+    <section className=" my-16 px-4 md:px-16 bg-gray-50 dark:bg-gray-800 pt-10">
       <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
         <section className="relative flex  items-end bg-gray-900 lg:col-span-5 lg:h-5/6 xl:col-span-6">
           <img

@@ -1,10 +1,15 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 
-const SwipperXl = () => {
+const SwipperXl = ({
+  goToNextSlide,
+  goToPreviousSlide,
+}) => {
   return (
     <div classNameName="hidden lg:mt-8 lg:flex lg:gap-4">
       <button
         type="button"
+        onClick={() => goToPreviousSlide()}
         className="hover:text-gray-500 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center mr-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:focus:ring-blue-800 dark:hover:bg-blue-500"
       >
         <svg
@@ -26,6 +31,7 @@ const SwipperXl = () => {
       </button>
       <button
         type="button"
+        onClick={() => goToNextSlide()}
         className=" hover:text-text-500 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center mr-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:focus:ring-blue-800 dark:hover:bg-blue-500"
       >
         <svg

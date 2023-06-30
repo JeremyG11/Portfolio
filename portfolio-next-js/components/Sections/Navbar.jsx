@@ -63,8 +63,6 @@ const Navbar = () => {
                     <label
                       role="button"
                       htmlFor="toggle_nav"
-                      aria-label="hamburger"
-                      id="hamburger"
                       className="relative z-40 px-2 py-3 sm:-mr-6"
                     >
                       <div

@@ -1,16 +1,30 @@
 "use client";
 import React, { useCallback, useState, useEffect } from "react";
 
-const Tabs = ({ tabsData }) => {
+const Tabs = ({ tabsData, projects }) => {
   const [activeTab, setActiveTab] = useState(0);
+  const [filteredProjects, setFilteredProjects] = useState(projects);
 
-  const handleTabClick = useCallback((index) => {
-    setActiveTab(index);
-  }, []);
+  const handleTabClick = useCallback(
+    (index) => {
+      setActiveTab(index);
+      if (index === 0) {
+        setFilteredProjects(projects);
+      } else {
+        const selectedTab = tabsData[index]?.title;
+        const filtered = projects.filter(
+          (project) => project.type.toLowerCase() === selectedTab.toLowerCase()
+        );
+        setFilteredProjects(filtered);
+      }
+    },
+    [projects, tabsData]
+  );
 
   useEffect(() => {
-    console.log("Active tab changed:", activeTab);
-  }, [activeTab]);
+    const currentTabTitle = tabsData[activeTab]?.title;
+    console.log("Current tab title:", currentTabTitle);
+  }, [activeTab, tabsData]);
   return (
     <>
       <section className="bg-white dark:bg-gray-800 darK:text-white font-montserrat px-4 py-16 md:px-16">
@@ -42,9 +56,35 @@ const Tabs = ({ tabsData }) => {
               );
             })}
           </nav>
-          <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {tabsData[activeTab]?.content}
+
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {filteredProjects.map((project, index) => (
+              <div key={index}>
+                {" "}
+                <a
+                  href="#"
+                  className="group relative block h-80 overflow-hidden  bg-gray-100"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1687992659743-69a6a730ea5b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60"
+                    loading="lazy"
+                    alt="Photo by Austin Wade"
+                    className="h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+                  />
+
+                  <div className="min-w-full mx-auto absolute right-0 bottom-5 transition duration-300 group-hover:block hidden">
+                    <div className="flex items-center justify-center   ">
+                      <div className="p-0 flex items-center">
+                        <div className="p-3 h-full bg-white text-gray-500 hover:bg-rose-700 hover:text-white "></div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            ))}
+            <div></div>
           </div>
+
           <div className="mt-10">
             <a
               className="w-44 group rounded-sm flex items-center justify-between gap-3 border border-black bg-black px-8 py-3 transition-colors hover:bg-gray-100 focus:outline-none"

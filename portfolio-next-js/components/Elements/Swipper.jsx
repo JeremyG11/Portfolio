@@ -2,18 +2,20 @@
 import React, { useState } from "react";
 
 const Swipper = () => {
-  const [swiper, setSwiper] = useState(null);
-  const prevSlide = () => {
-    if (swiper) {
-      swiper.slidePrev();
-    }
-  };
+ const [currentSlide, setCurrentSlide] = useState(0);
 
-  const nextSlide = () => {
-    if (swiper) {
-      swiper.slideNext();
-    }
-  };
+ const goToNextSlide = () => {
+   setCurrentSlide((prevSlide) =>
+     prevSlide === images.length - 1 ? 0 : prevSlide + 1
+   );
+ };
+
+ const goToPreviousSlide = () => {
+   setCurrentSlide((prevSlide) =>
+     prevSlide === 0 ? images.length - 1 : prevSlide - 1
+   );
+ };
+ 
 
   return (
     <div className="mt-8 flex justify-center gap-4 lg:hidden">

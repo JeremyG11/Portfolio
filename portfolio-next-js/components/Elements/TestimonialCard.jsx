@@ -1,6 +1,6 @@
 import React from "react";
-import { LiaQuoteRightSolid } from "react-icons/lia"
-const TestimonialCard = () => {
+import { LiaQuoteRightSolid } from "react-icons/lia";
+const TestimonialCard = ({ testimonial }) => {
   return (
     <div className="relative flex flex-shrink-0 w-full sm:w-auto">
       <blockquote className="flex w-[500px] h-full flex-col justify-between bg-white dark:bg-gray-800 dark:opacity-80 px-12 py-8">
@@ -11,10 +11,7 @@ const TestimonialCard = () => {
 
           <div>
             <p className="mt-4 leading-relaxed text-gray-500 dark:text-gray-200 italic text-center">
-              No, Rose, they are not breathing. And they have no arms or legs …
-              Where are they? You know what? If we come across somebody with no
-              arms or legs, do we bother resuscitating them? I mean, what
-              quality of life do we have there?
+              {testimonial.body}
             </p>
           </div>
         </div>
@@ -30,10 +27,10 @@ const TestimonialCard = () => {
           <div className="flex justify-center">
             <span className="flex-grow flex flex-col pl-4">
               <span className="title-font text-base font-medium text-gray-500 dark:text-gray-400">
-                Cristaino Ronaldo
+                {testimonial.name}
               </span>
               <span className="text-gray-500 text-sm dark:text-gray-400">
-                DESIGNER
+                {testimonial.title}
               </span>
               <div className="mt-3 flex gap-4 text-gray-400">
                 <a href="/">
