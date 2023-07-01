@@ -35,7 +35,7 @@ const Navbar = () => {
     <>
       <header
         className={
-          "fixed top-0 w-full px-4 md:px-16 z-50 transition-all bg-white dark:text-gray-100 dark:bg-gray-900 " +
+          "fixed top-0 w-full px-4 md:px-16 z-50 transition-all bg-white dark:text-gray-100 dark:bg-gray-800 " +
           (scrollActive ? " shadow-sm py-0" : " py-2")
         }
       >
@@ -123,18 +123,15 @@ const Navbar = () => {
                   </div>
                   <div className="w-full gap-y-4 md:w-max md:gap-y-0 md:gap-x-4 flex md:flex-row flex-col font-montserrat">
                     <ThemeButton />
-                    <a
-                      className="group rounded-sm flex flex-row-reverse items-center justify-center gap-3 border border-black bg-black px-8 py-3 transition-colors hover:bg-gray-100 focus:outline-none"
-                      href="/download"
-                    >
-                      <span className="font-medium shrink-0 text-sm  text-white transition-colors group-hover:text-black group-active:text-black">
+                    <button className="w-44 group rounded-sm flex flex-row-reverse items-center justify-between gap-3 border border-black dark:border-gray-100 bg-black px-8 py-3 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none dark:bg-white dark:text-black">
+                      <span className="font-medium shrink-0 text-sm  text-white dark:text-black transition-colors group-hover:text-black group-active:text-black dark:group-hover:text-white dark:group-active:text-white">
                         Download CV
                       </span>
 
-                      <span className="shrink-0 rounded-full  text-white group-hover:text-black  group-active:text-black">
-                        <ImDownload className="group-active:text-black" />
+                      <span className="shrink-0 rounded-full  text-white dark:text-black group-hover:text-black dark:group-hover:text-white  group-active:text-black  dark:group-active:text-white">
+                        <ImDownload className="group-active:text-black dark:group-active:text-white" />
                       </span>
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>

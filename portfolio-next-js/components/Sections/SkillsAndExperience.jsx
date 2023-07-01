@@ -1,75 +1,101 @@
 import React from "react";
 import { SiTailwindcss, SiReact } from "react-icons/si";
-import { TbBrandNextjs } from "react-icons/tb"
+import { MdOutlineDoneAll } from "react-icons/md";
 
 const SkillsAndExperience = () => {
   return (
-    <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-16 lg:py-20">
-      <div className="flex flex-col mb-6 lg:flex-row md:mb-10">
-        <div className="lg:w-1/2">
-          <h2 className="relative text-2xl dark:text-white pl-5 before:content-[''] before:absolute before:w-[3px] rounded-lg before:mr-2 before:h-10 uppercase before:bg-[#ff0062] before:-bottom-1 before:left-0">
-            My Skills and Experience
-          </h2>
-          <p className="my-5 italic text-sm">
-            Don't just take my words for it. see the comments and reviews
-          </p>
-        </div>
+    <section className="px-4 py-12 dark:bg-gray-900">
+      <div className="mx-auto max-w-lg">
+        <h2 className="font-montserrat relative text-2xl text-gray-600 dark:text-white pl-5 before:content-[''] before:absolute before:w-[3px] rounded-lg before:mr-2 before:h-10 uppercase before:bg-[#ff0062] before:-bottom-1 before:left-0">
+          My Skills and Experience
+        </h2>
+        <p className="my-5 italic text-sm">
+          Don't just take my words for it. see the comments and reviews
+        </p>
       </div>
-      <div className="grid gap-8 row-gap-10 sm:grid-cols-2 lg:grid-cols-3">
-        <div className="bg-gray-100 p-6">
-          <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"
-              />
-            </svg>
-          </div>
-          <h6 className="mb-2 font-semibold font-assistant leading-5">Designs and Frontend</h6>
-
-          <ul className="mb-4 -ml-1 space-y-2">
-            <li className="flex items-center">
-              <span className="mr-1 p-2 bg-slate-100 rounded-full">
-                <SiTailwindcss />
+      <div className="grid grid-cols-1 md:grid-cols-2 w-full mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-16 lg:py-20">
+        <ol className="relative text-gray-500 border-l-2   border-[#ff0062]  dark:text-gray-400">
+          <li className="mb-5 p-3 flex  ">
+            <div className="w-12 max-h-4 relative">
+              <span className="wrapper"></span>
+              <span className="absolute flex items-center justify-center min-w-full p-1  bg-[#ff0062] -left-4">
+                <MdOutlineDoneAll className="w-5 h-5 text-white" />
               </span>
-              <p className="ml-4">Tailwind CSS</p>
-            </li>
-            <li className="flex items-center">
-              <span className="mr-1 p-2 bg-slate-100 rounded-full">
-                <TbBrandNextjs />
+            </div>
+            <div className="border-1 border-gray-50 ml-8 py-6 -mt-5 px-12 opacity-80 rounded">
+              <h3 className="ml-3 relative font-raleway tracking-wider text-sm text-gray-500 dark:text-white pl-5 before:content-[''] before:absolute before:w-[24px] rounded-lg before:mr-2 before:h-[2px] uppercase before:bg-[#ff0062] before:top-2 before:-left-5">
+                Programming languages
+              </h3>
+              <ul className="pl-5 mt-2 space-y-1 font-assitance list-disc list-inside">
+                <li>HTML 5</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+              </ul>
+            </div>
+          </li>
+          <li className="mb-5 p-3 flex  ">
+            <div className="w-12 max-h-4 relative">
+              <span className="wrapper"></span>
+              <span className="absolute flex items-center justify-center w-full p-1  bg-[#ff0062] -left-4">
+                <MdOutlineDoneAll className="w-5 h-5 text-white" />
               </span>
-              <p className="ml-4">Next JS</p>
-            </li>
-            <li className="flex items-center">
-              <span className="mr-1 p-2 bg-slate-100 rounded-full">
-                <SiReact />
+            </div>
+            <div className="border-1 border-gray-50 ml-8 py-6 -mt-5 px-12 opacity-80 rounded">
+              <h3 className="ml-3 relative font-raleway tracking-wider text-sm text-gray-500 dark:text-white pl-5 before:content-[''] before:absolute before:w-[24px] rounded-lg before:mr-2 before:h-[2px] uppercase before:bg-[#ff0062] before:top-2 before:-left-5">
+                Frameworks and Libraries
+              </h3>
+              <ul className="pl-5 mt-2 space-y-1 font-assitance list-disc list-inside">
+                <li>React JS</li>
+                <li>Next JS</li>
+                <li>Node JS</li>
+                <li>Express JS</li>
+                <li>Tailwind CSS</li>
+                <li>React Native</li>
+                <li>Django Rest framework</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+        <ol className="relative text-gray-500 border-l-2   border-[#ff0062]  dark:text-gray-400">
+          <li className="mb-5 p-3 flex  ">
+            <div className="w-12 max-h-4 relative">
+              <span className="wrapper"></span>
+              <span className="absolute flex items-center justify-center w-full p-1  bg-[#ff0062] -left-4">
+                <MdOutlineDoneAll className="w-5 h-5 text-white" />
               </span>
-              <p className="ml-4">React JS</p>
-            </li>
-            <li className="flex items-center">
-              <span className="mr-1 p-2 bg-slate-100 rounded-full">
-                <SiTailwindcss />
+            </div>
+            <div className=" ml-6 py-6 -mt-5 px-12 rounded">
+              <h3 className="ml-3 relative font-raleway tracking-wider text-sm text-gray-500 dark:text-white pl-5 before:content-[''] before:absolute before:w-[24px] rounded-lg before:mr-2 before:h-[2px] uppercase before:bg-[#ff0062] before:top-2 before:-left-5">
+                Databases
+              </h3>
+              <ul className="pl-5 mt-2 space-y-1 font-assitance list-disc list-inside">
+                <li>MongoDB</li>
+                <li>MySQL</li>
+                <li>Firebase</li>
+              </ul>
+            </div>
+          </li>
+          <li className="mb-5 p-3 flex  ">
+            <div className="w-12 max-h-4 relative">
+              <span className="wrapper"></span>
+              <span className="absolute flex items-center justify-center w-full p-1  bg-[#ff0062] -left-4">
+                <MdOutlineDoneAll className="w-5 h-5 text-white" />
               </span>
-              <p className="ml-4">Tailwind CSS</p>
-            </li>
-            <li className="flex items-center">
-              <span className="mr-1 p-2 bg-slate-100 rounded-full">
-                <SiTailwindcss />
-              </span>
-              <p className="ml-4">Tailwind CSS</p>
-            </li>
-          </ul>
-        </div>
+            </div>
+            <div className=" ml-6 py-6 -mt-5 px-12 rounded">
+              <h3 className="ml-3 relative font-raleway tracking-wider text-sm text-gray-500 dark:text-white pl-5 before:content-[''] before:absolute before:w-[24px] rounded-lg before:mr-2 before:h-[2px] uppercase before:bg-[#ff0062] before:top-2 before:-left-5">
+                Familiarity With
+              </h3>
+              <ul className="pl-5 mt-2 space-y-1 font-assitance list-disc list-inside">
+                <li>Docker</li>
+                <li>Git</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -3,3 +3,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+  .wrapper{
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 99%;
+    transform: translateX(-50%);
+    border: 15px solid;
+    border-color: transparent transparent transparent #ff0062;
+    z-index: 5;
+  }

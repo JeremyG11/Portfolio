@@ -25,18 +25,15 @@ const About = () => {
 
           <div className="mt-4 flex justify-center">
             <div className="my-5 font-montserrat">
-              <a
-                className="group rounded-sm flex flex-row-reverse items-center justify-between gap-3 border border-black bg-black px-8 py-3 transition-colors hover:bg-gray-100 focus:outline-none"
-                href="/download"
-              >
-                <span className="font-medium text-sm  text-white transition-colors group-hover:text-black group-active:text-black">
+              <button className="group rounded-sm flex flex-row-reverse items-center justify-between gap-3 border border-black dark:border-gray-100 bg-black px-8 py-3 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none dark:bg-white dark:text-black">
+                <span className="font-medium text-sm  text-white dark:text-black transition-colors group-hover:text-black group-active:text-black dark:group-hover:text-white dark:group-active:text-white">
                   Download CV
                 </span>
 
-                <span className="shrink-0 rounded-full  text-white group-hover:text-black  group-active:text-black">
-                  <ImDownload className="group-active:text-black" />
+                <span className="shrink-0 rounded-full  text-white dark:text-black group-hover:text-black dark:group-hover:text-white  group-active:text-black  dark:group-active:text-white">
+                  <ImDownload className="group-active:text-black dark:group-active:text-white" />
                 </span>
-              </a>
+              </button>
             </div>
           </div>
         </div>

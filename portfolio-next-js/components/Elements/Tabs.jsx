@@ -57,7 +57,7 @@ const Tabs = ({ tabsData, projects }) => {
             })}
           </nav>
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {filteredProjects.map((project, index) => (
               <div key={index}>
                 {" "}
@@ -86,22 +86,19 @@ const Tabs = ({ tabsData, projects }) => {
           </div>
 
           <div className="mt-10">
-            <a
-              className="w-44 group rounded-sm flex items-center justify-between gap-3 border border-black bg-black px-8 py-3 transition-colors hover:bg-gray-100 focus:outline-none"
-              href="/download"
-            >
-              <span className="font-medium text-sm  uppercase text-white transition-colors group-hover:text-black group-active:text-black">
+            <button className="group rounded-sm flex items-center justify-between gap-3 border border-black dark:border-gray-100 bg-black px-8 py-3 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none dark:bg-white dark:text-black">
+              <span className="font-medium text-sm  text-white dark:text-black transition-colors group-hover:text-black group-active:text-black dark:group-hover:text-white dark:group-active:text-white">
                 See More
               </span>
 
-              <span className="shrink-0 rounded-full  text-white group-hover:text-black  group-active:text-black">
+              <span className="shrink-0 rounded-full  text-white dark:text-black group-hover:text-black dark:group-hover:text-white  group-active:text-black  dark:group-active:text-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-5 h-5"
+                  className="w-4 h-4 group-active:text-black dark:group-active:text-white"
                 >
                   <path
                     strokeLinecap="round"
@@ -110,7 +107,7 @@ const Tabs = ({ tabsData, projects }) => {
                   />
                 </svg>
               </span>
-            </a>
+            </button>
           </div>
         </div>
       </section>
