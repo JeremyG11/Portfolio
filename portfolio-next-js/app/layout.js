@@ -3,7 +3,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import Footer from "@/components/Sections/Footer";
 import { Providers } from "./providers";
-
+ 
 
 export const metadata = {
   title: "Gatwech Tap Nguth's Portfolio website",
@@ -11,12 +11,11 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  return (
+   return (
     <html lang="en">
       <body className="bg-white dark:bg-gray-800 ">
         <Providers>
-          <Navbar />
-          {children}
+           {children}
           <Footer />
         </Providers>
       </body>

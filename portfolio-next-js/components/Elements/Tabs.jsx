@@ -1,5 +1,7 @@
 "use client";
 import React, { useCallback, useState, useEffect } from "react";
+import ProjectCard from "./ProjectCard";
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 const Tabs = ({ tabsData, projects }) => {
   const [activeTab, setActiveTab] = useState(0);
@@ -25,73 +27,57 @@ const Tabs = ({ tabsData, projects }) => {
     const currentTabTitle = tabsData[activeTab]?.title;
     console.log("Current tab title:", currentTabTitle);
   }, [activeTab, tabsData]);
+
   return (
     <>
-      <section className="bg-white dark:bg-gray-800 darK:text-white font-montserrat px-4 py-16 md:px-16">
-        <div className="mx-auto max-w-screen-xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8">
-          <div className="mx-auto max-w-lg flex flex-col items-center justify-center ">
+      <section className="bg-white dark:bg-gray-800 dark:text-white font-montserrat px-4 py-16 md:px-16">
+        <div className="mx-auto max-w-screen-xl px-4 py-24 sm:py-12 sm:px-6 lg:py-16 lg:px-8">
+          <div className="mx-auto max-w-lg flex flex-col items-center justify-center">
             <h2 className="relative text-2xl font-raleway font-medium text-gray-500 dark:text-white pl-5 before:content-[''] before:absolute before:w-[30px] rounded-lg before:mr-2 before:h-[2px] uppercase before:bg-[#ff0062] before:top-4 before:-left-5">
               Projects
             </h2>
             <p className="my-5 italic text-sm">
-              Don't just take my words for it. see the comments and reviews
+              Don't just take my words for it. See the comments and reviews.
             </p>
           </div>
-          <nav className=" mt-6 flex justify-center text-sm font-medium">
-            {tabsData?.map((tab, indx) => {
-              return (
-                <div key={indx}>
-                  <button
-                    onClick={() => handleTabClick(indx)}
-                    href=""
-                    className={
-                      indx === activeTab
-                        ? "md:mx-10 font-montserrat uppercase text-sm cursor-pointer mr-6 py-3 font-semiblod relative  font-medium after:content-[''] after:absolute after:w-[100%] text-[#D31717] after:transition-all hover:after:w-[100%] after:h-[2px] after:bg-[#D31717] hover:text-[#D31717] after:bottom-2 after:left-0"
-                        : "md:mx-10 font-montserrat uppercase text-sm cursor-pointer mr-6 py-3 relative font-semiblod text-gray-500 dark:text-gray-20 after:content-[''] after:absolute after:w-0 after:transition-all hover:after:w-[100%] after:h-[2px] after:bg-[#D31717] hover:text-[#D31717] after:bottom-2 after:left-0"
-                    }
-                  >
-                    {tab.title}
-                  </button>
-                </div>
-              );
-            })}
-          </nav>
-
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {filteredProjects.map((project, index) => (
-              <div key={index}>
-                {" "}
-                <a
-                  href="#"
-                  className="group relative block h-80 overflow-hidden  bg-gray-100"
+          <nav className="mt-6 flex justify-center text-sm font-medium">
+            {tabsData?.map((tab, indx) => (
+              <div key={indx}>
+                <button
+                  onClick={() => handleTabClick(indx)}
+                  className={`md:mx-10 font-montserrat uppercase text-sm cursor-pointer mr-6 py-3 ${
+                    indx === activeTab
+                      ? "font-semiblod relative font-medium after:content-[''] after:absolute after:w-[100%] text-[#D31717] after:transition-all hover:after:w-[100%] after:h-[2px] after:bg-[#D31717] hover:text-[#D31717] after:bottom-2 after:left-0"
+                      : "relative font-semiblod text-gray-500 dark:text-gray-20 after:content-[''] after:absolute after:w-0 after:transition-all hover:after:w-[100%] after:h-[2px] after:bg-[#D31717] hover:text-[#D31717] after:bottom-2 after:left-0"
+                  }`}
                 >
-                  <img
-                    src="https://images.unsplash.com/photo-1687992659743-69a6a730ea5b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60"
-                    loading="lazy"
-                    alt="Photo by Austin Wade"
-                    className="h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
-                  />
-
-                  <div className="min-w-full mx-auto absolute right-0 bottom-5 transition duration-300 group-hover:block hidden">
-                    <div className="flex items-center justify-center   ">
-                      <div className="p-0 flex items-center">
-                        <div className="p-3 h-full bg-white text-gray-500 hover:bg-rose-700 hover:text-white "></div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
+                  {tab.title}
+                </button>
               </div>
             ))}
-            <div></div>
-          </div>
+          </nav>
 
           <div className="mt-10">
+            <ResponsiveMasonry
+              columnsCountBreakPoints={{ 250: 1, 650: 2, 800: 3 }}
+            >
+              <Masonry gutter={20}>
+                {filteredProjects.map((project, index) => (
+                  <div key={index} className="overflow-hidden bg-gray-100">
+                    <ProjectCard project={project} />
+                  </div>
+                ))}
+              </Masonry>
+            </ResponsiveMasonry>
+          </div>
+
+          <div className="mt-10 flex justify-end">
             <button className="group rounded-sm flex items-center justify-between gap-3 border border-black dark:border-gray-100 bg-black px-8 py-3 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none dark:bg-white dark:text-black">
-              <span className="font-medium text-sm  text-white dark:text-black transition-colors group-hover:text-black group-active:text-black dark:group-hover:text-white dark:group-active:text-white">
+              <span className="font-medium text-sm text-white dark:text-black transition-colors group-hover:text-black group-active:text-black dark:group-hover:text-white dark:group-active:text-white">
                 See More
               </span>
 
-              <span className="shrink-0 rounded-full  text-white dark:text-black group-hover:text-black dark:group-hover:text-white  group-active:text-black  dark:group-active:text-white">
+              <span className="shrink-0 rounded-full text-white dark:text-black group-hover:text-black dark:group-hover:text-white group-active:text-black dark:group-active:text-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"

@@ -1,12 +1,9 @@
 "use client";
 import React, { useState } from "react";
 
-const SwipperXl = ({
-  goToNextSlide,
-  goToPreviousSlide,
-}) => {
+const SwipperXl = ({ goToNextSlide, goToPreviousSlide }) => {
   return (
-    <div classNameName="hidden lg:mt-8 lg:flex lg:gap-4">
+    <div className="hidden lg:mt-8 lg:flex lg:gap-4">
       <button
         type="button"
         onClick={() => goToPreviousSlide()}

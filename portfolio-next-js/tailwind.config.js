@@ -21,6 +21,9 @@ module.exports = {
         opensan: ["Open Sans", "sans-serif"],
         assistant: ["Assistant", "sans-serif"],
       },
+      gridTemplateColumns: {
+        fluid: "repeat(auto-fill, minmax(250px, 1fr))",
+      },
     },
   },
   plugins: [],

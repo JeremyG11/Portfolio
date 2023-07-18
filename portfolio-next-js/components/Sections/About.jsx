@@ -37,11 +37,18 @@ const About = () => {
             </div>
           </div>
         </div>
-        {/* <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-          <div className="mx-auto invisible md:visible bg-gradient-to-b from-teal-500  w-80 h-80 rounded-full overflow-hidden md:h-96 md:w-96">
-            <h3>IMAGE</h3>
+        <div className="mx-auto invisible md:visible">
+          <div className="group relative rounded-full  space-y-6 overflow-hidden">
+            <img
+              className="mx-auto h-56 w-56 grayscale object-cover object-top ransition duration-500 group-hover:scale-105 group-hover:grayscale-0"
+              src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+              alt="Gatwech"
+              loading="lazy"
+              width="640"
+              height="805"
+            />
           </div>
-        </div> */}
+        </div>
       </div>
     </section>
   );
