@@ -61,7 +61,7 @@ const Tabs = ({ tabsData, projects }) => {
             <ResponsiveMasonry
               columnsCountBreakPoints={{ 250: 1, 650: 2, 800: 3 }}
             >
-              <Masonry gutter={20}>
+              <Masonry gutter="20px">
                 {filteredProjects.map((project, index) => (
                   <div key={index} className="overflow-hidden bg-gray-100">
                     <ProjectCard project={project} />

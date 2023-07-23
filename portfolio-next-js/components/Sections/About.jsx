@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { ImDownload } from "react-icons/im";
 
@@ -25,15 +26,23 @@ const About = () => {
 
           <div className="mt-4 flex justify-center">
             <div className="my-5 font-montserrat">
-              <button className="group rounded-sm flex flex-row-reverse items-center justify-between gap-3 border border-black dark:border-gray-100 bg-black px-8 py-3 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none dark:bg-white dark:text-black">
+              <Link
+                href="https://drive.google.com/uc?export=download&id=YOUR_FILE_ID"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group rounded-sm flex flex-row-reverse items-center
+                justify-between gap-3 border border-black dark:border-gray-100
+                bg-black px-8 py-3 transition-colors hover:bg-gray-100
+                dark:hover:bg-gray-800 focus:outline-none dark:bg-white
+                dark:text-black"
+              >
                 <span className="font-medium text-sm  text-white dark:text-black transition-colors group-hover:text-black group-active:text-black dark:group-hover:text-white dark:group-active:text-white">
                   Download CV
                 </span>
-
                 <span className="shrink-0 rounded-full  text-white dark:text-black group-hover:text-black dark:group-hover:text-white  group-active:text-black  dark:group-active:text-white">
                   <ImDownload className="group-active:text-black dark:group-active:text-white" />
                 </span>
-              </button>
+              </Link>
             </div>
           </div>
         </div>

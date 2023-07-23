@@ -11,7 +11,7 @@ const TestimonialCard = ({ testimonial }) => {
 
           <div>
             <p className="mt-4 leading-relaxed text-gray-500 dark:text-gray-200 italic text-center">
-              {testimonial.body}
+              {testimonial.reviewContent}
             </p>
           </div>
         </div>

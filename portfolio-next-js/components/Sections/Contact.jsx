@@ -1,16 +1,19 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
 import Link from "next/link";
+import emailjs from "@emailjs/browser";
 import { TfiLinkedin } from "react-icons/tfi";
 import { IoLogoTwitter, IoLogoGithub } from "react-icons/io";
 import { TbBrandDribbbleFilled } from "react-icons/tb";
 import { BiLogoTelegram } from "react-icons/bi";
+import SuccessAlert from "../Elements/SuccessAlert";
 
 const Contact = () => {
   const formRef = useRef();
   const [alert, setAlert] = useState(false);
   const [loading, setLoading] = useState(null);
   const [message, setMessage] = useState("");
+  const [status, setStatus] = useState(0);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -25,23 +28,31 @@ const Contact = () => {
       .then(
         (result) => {
           if (result.status === 200) {
+            setStatus(result.status);
             setLoading(false);
             setAlert(true);
             setMessage("Thank you! Your message had been sent successfully!");
-            setTimeout(() => setAlert(false), 2000);
+            setTimeout(() => setAlert(false), 5000);
           }
           formRef.current.value = "";
         },
         (error) => {
           if (error) {
+            console.log(
+              error,
+              process.env.NEXT_PUBLIC_PUBLIC_KEY,
+              process.env.NEXT_PUBLIC_SERVICE_ID,
+              process.env.NEXT_PUBLIC_TEMPLATE_ID
+            );
+            setStatus(error.status);
             setLoading(false);
             setAlert(true);
             setMessage("Sorry!, Your message couldn't be sent ");
-            setTimeout(() => setAlert(false), 2000);
+            setTimeout(() => setAlert(false), 5000);
           }
         }
       );
-    e.target.reset();
+    // formRef.current.reset();
   };
 
   useEffect(() => {}, [message]);
@@ -100,6 +111,7 @@ const Contact = () => {
         <main className="shadow-2xl max-w-xl bg-white dark:bg-gray-900 p-6 pl-4  h-5/6 flex items-end justify-center lg:col-span-7 xl:col-span-6">
           <div className="max-w-xl lg:max-w-3xl">
             <div className="max-w-[410px]">
+              {alert && <SuccessAlert message={message} status={status} />}
               <div>
                 <h2 className="text relative text-2xl dark:text-white pl-5 tracking-wider before:content-[''] before:absolute before:w-[3px] rounded-lg before:mr-2 before:h-10 uppercase before:bg-[#ff0062] before:-bottom-1 before:left-0">
                   contact Me
@@ -117,7 +129,7 @@ const Contact = () => {
                 <div className="w-full my-5 relative ">
                   <input
                     type="text"
-                    name="name"
+                    name="user_name"
                     required
                     autoComplete="off"
                     className="w-full bg-transparent outline-none peer border-[#9b9b9b] border-b-2 py-1"
@@ -129,7 +141,7 @@ const Contact = () => {
                 <div className="my-5 relative">
                   <input
                     type="email"
-                    name="email"
+                    name="user_email"
                     required
                     placeholder=" "
                     autoComplete="off"

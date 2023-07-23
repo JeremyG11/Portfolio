@@ -3,7 +3,8 @@ const nextConfig = {}
 
 module.exports = {
   images: {
-    domains: ["images.unsplash.com"],
+    loader: "cloudinary",
+    path: "https://res.cloudinary.com/myaccount",
   },
 };
 module.exports = nextConfig
