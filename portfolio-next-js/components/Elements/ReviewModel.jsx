@@ -2,8 +2,10 @@
 import { useState, useEffect } from "react";
 import { FiSend } from "react-icons/fi";
 import SocialMediaLinks from "./SocialMediaLinks";
+import AlertModal from "./AlertModal";
 
 const ReviewModel = ({ toggler, setToggler }) => {
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [loading, setLoading] = useState(false);
   const [name, setName] = useState("");
   const [occupation, setOccupation] = useState("");
@@ -15,9 +17,8 @@ const ReviewModel = ({ toggler, setToggler }) => {
     },
   ]);
 
-  const handleOnSubmit = (e) => {
+  const handleOnSubmit = async (e) => {
     e.preventDefault();
-    // console.log(name, occupation, content, links);
     const data = {
       reviewContent: content,
       name,
@@ -26,29 +27,42 @@ const ReviewModel = ({ toggler, setToggler }) => {
     };
     console.log(JSON.stringify(data));
     setLoading(true);
-    fetch("http://localhost:5757/api/reviews/add-review", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data) {
-          setLoading(false);
-             setName("");
-             setOccupation("");
-             setContent("");
-             setLinks([{ id: 1, value: "" }]);
-        }
-         
-      })
-      .catch((error) => {
-        setLoading(false);
-        
-        console.error("Error submitting review:", error);
+    try {
+      const res = await fetch("https://portfolio-rest-api.onrender.com/api/reviews/add-review", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
       });
+      const response = await res.json();
+      console.log(response);
+      if (data) {
+        setLoading(false);
+      }
+      setName("");
+      setOccupation("");
+      setContent("");
+      setLinks([{ id: 1, value: "" }]);
+      setShowSuccessModal(true);
+    } catch (error) {
+      setLoading(false);
+
+      console.error("Error submitting review:", error);
+    }
+  };
+
+  const SuccessModal = () => {
+    useEffect(() => {
+      const timer = setTimeout(() => {
+        setShowSuccessModal(false);
+        setToggler(false);
+      }, 4000);
+
+      return () => clearTimeout(timer);
+    }, []);
+
+    return <AlertModal />;
   };
 
   return toggler ? (
@@ -78,8 +92,8 @@ const ReviewModel = ({ toggler, setToggler }) => {
               </svg>
             </button>
           </div>
-          <div className="max-w-4xl px-6 mx-auto bg-white dark:bg-gray-800">
-            <h2 className="py-6 text-lg text-center font-semibold text-gray-700 capitalize dark:text-white">
+          <div className="max-w-4xl px-6 mx-auto bg-white ">
+            <h2 className="py-6 text-lg text-center font-semibold text-gray-700 capitalize  ">
               🙏🏿 Heartfelt Gratitude for Your Invaluable Review! 🎉
             </h2>
 
@@ -87,7 +101,7 @@ const ReviewModel = ({ toggler, setToggler }) => {
               <div className="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
                 <div>
                   <label
-                    className="block mb-2 text-gray-700 dark:text-white"
+                    className="block mb-2 text-gray-700 "
                     htmlFor="username"
                   >
                     Your Name
@@ -96,14 +110,15 @@ const ReviewModel = ({ toggler, setToggler }) => {
                     onChange={(e) => setName(e.target.value)}
                     id="username"
                     type="text"
+                    required
                     placeholder="e.g John Doe"
-                    className="block w-full px-4 py-2 mt-2 text-gray-700 rounded-md bg-white border border-gray-200  dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-gray-900 focus:ring-gray-900 focus:ring-opacity-20 dark:focus:border-gray-900 focus:outline-none focus:ring"
+                    className="block w-full px-4 py-2 mt-2 text-gray-700 rounded-md bg-white border border-gray-200 focus:border-gray-900 focus:ring-gray-900 focus:ring-opacity-20 focus:outline-none focus:ring"
                   />
                 </div>
 
                 <div>
                   <label
-                    className="block mb-2 text-gray-700 dark:text-white"
+                    className="block mb-2 text-gray-700  "
                     htmlFor="emailAddress"
                   >
                     Your Occupation
@@ -111,31 +126,33 @@ const ReviewModel = ({ toggler, setToggler }) => {
                   <input
                     id="emailAddress"
                     type="text"
+                    required
                     onChange={(e) => setOccupation(e.target.value)}
                     placeholder="e.g Senior developer"
-                    className="block w-full px-4 py-2 mt-2 rounded-md text-gray-700 bg-white border border-gray-200  dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-gray-900 focus:ring-gray-900 focus:ring-opacity-20 dark:focus:border-gray-900 focus:outline-none focus:ring"
+                    className="block w-full px-4 py-2 mt-2 rounded-md text-gray-700 bg-white border border-gray-200 focus:border-gray-900 focus:ring-gray-900 focus:ring-opacity-20 focus:outline-none focus:ring"
                   />
                 </div>
 
                 <div className="col-span-2">
                   <label
                     htmlFor="message"
-                    className="block mb-2 text-gray-700 dark:text-white"
+                    className="block mb-2 text-gray-700  "
                   >
                     Your review message
                   </label>
                   <textarea
                     id="message"
                     rows="5"
+                    required
                     onChange={(e) => setContent(e.target.value)}
-                    className="resize-none block w-full px-4 py-2 mt-2 rounded-md text-gray-700 bg-white border border-gray-200  dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-gray-900 focus:ring-gray-900 focus:ring-opacity-20 dark:focus:border-gray-900 focus:outline-none focus:ring"
+                    className="resize-none block w-full px-4 py-2 mt-2 rounded-md text-gray-700 bg-white border border-gray-200  focus:border-gray-900 focus:ring-gray-900 focus:ring-opacity-20   focus:outline-none focus:ring"
                     placeholder="Type here ..."
                   ></textarea>
                 </div>
 
                 <div className="col-span-2">
                   <label
-                    className="text-gray-700 dark:text-gray-200"
+                    className="text-gray-700  "
                     htmlFor="passwordConfirmation"
                   >
                     if you don't mind sharing social media link. e.g Linkdin{" "}
@@ -148,17 +165,17 @@ const ReviewModel = ({ toggler, setToggler }) => {
                 <div className="my-3 font-montserrat">
                   <button
                     type="submit"
-                    className="group rounded-sm flex items-center justify-between gap-3 border border-black dark:border-gray-100 bg-black px-8 py-3 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none dark:bg-white dark:text-black"
+                    className="group rounded-sm flex items-center justify-between gap-3 border border-black bg-black px-8 py-3 transition-colors hover:bg-gray-100  focus:outline-none"
                   >
-                    <span className="font-medium text-sm  text-white dark:text-black transition-colors group-hover:text-black group-active:text-black dark:group-hover:text-white dark:group-active:text-white">
+                    <span className="font-medium text-sm  text-white transition-colors group-hover:text-black group-active:text-black">
                       Submit Now
                     </span>
 
-                    <span className="shrink-0 rounded-full  text-white dark:text-black group-hover:text-black dark:group-hover:text-white  group-active:text-black  dark:group-active:text-white">
+                    <span className="shrink-0 rounded-full  text-white   group-hover:text-black  group-active:text-black">
                       {loading ? (
-                        <div>l</div>
+                        <div className="">l</div>
                       ) : (
-                        <FiSend className="group-active:text-black text-xl dark:group-active:text-white" />
+                        <FiSend className="group-active:text-black text-x" />
                       )}
                     </span>
                   </button>
@@ -168,6 +185,7 @@ const ReviewModel = ({ toggler, setToggler }) => {
           </div>
         </div>
       </div>
+      {showSuccessModal && <SuccessModal />}
     </div>
   ) : (
     ""

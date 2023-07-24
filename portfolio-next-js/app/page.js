@@ -11,7 +11,7 @@ import Link from "next/link";
 import gatwech from "../public/gatwech-pic.jpg";
 
 async function getUsers() {
-  const res = await fetch(` http://localhost:5757/api/reviews/`);
+  const res = await fetch(` https://portfolio-rest-api.onrender.com/api/reviews/`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");

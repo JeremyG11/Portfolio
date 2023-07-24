@@ -26,11 +26,11 @@ const TestimonialCard = ({ testimonial }) => {
           </div>
           <div className="flex justify-center">
             <span className="flex-grow flex flex-col pl-4">
-              <span className="title-font text-base font-medium text-gray-500 dark:text-gray-400">
+              <span className="title-font text-base font-medium uppercase text-gray-500 dark:text-gray-400">
                 {testimonial.name}
               </span>
               <span className="text-gray-500 text-sm dark:text-gray-400">
-                {testimonial.title}
+                {testimonial.occupation}
               </span>
               <div className="mt-3 flex gap-4 text-gray-400">
                 <a href="/">

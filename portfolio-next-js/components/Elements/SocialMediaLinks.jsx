@@ -25,7 +25,7 @@ function SocialMediaLinks({ links, setLinks }) {
                 value={link.value}
                 onChange={(e) => handleInputChange(link.id, e)}
                 placeholder="e.g https://www.linkedin.com/in/gat..."
-                className="block w-11/12 px-4 py-2 mt-2  text-gray-700 bg-white border rounded-md border-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-gray-900 focus:ring-gray-900 focus:ring-opacity-20 dark:focus:border-gray-900 focus:outline-none focus:ring"
+                className="block w-11/12 px-4 py-2 mt-2  text-gray-700 bg-white border rounded-md border-gray-200 focus:border-gray-900 focus:ring-gray-900 focus:ring-opacity-20 focus:outline-none focus:ring"
               />
               {link.id === links.length && (
                 <button

@@ -5,10 +5,12 @@ import Swipper from "../Elements/Swipper";
 import TestimonialCard from "../Elements/TestimonialCard";
 import SwipperXl from "../Elements/SwipperXl";
 import ReviewModel from "../Elements/ReviewModel";
+import AlertModal from "../Elements/AlertModal";
 
 const Testimonials = ({ testimonials }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [toggler, setToggler] = useState(false);
+  const [status, setStatus] = useState(false);
 
   const goToNextSlide = () => {
     setCurrentSlide((prevSlide) =>

@@ -1,14 +1,26 @@
 import React from "react";
 import Tabs from "../Elements/Tabs";
 
-const Portfolio = () => {
+async function getProjects() {
+  const res = await fetch(
+    ` https://portfolio-rest-api.onrender.com/api/projects/`
+  );
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+  return res.json();
+}
+
+const Portfolio = async () => {
+  const projects = await getProjects();
   const tabs = [
     { title: "All", content: "Content for Tab 1" },
     { title: "Designs", content: "Content for Tab 2" },
     { title: "Web Apps", content: "Content for Tab 3" },
     { title: "Latest", content: "Content for Tab 4" },
   ];
-  const projects = [
+  const project = [
     {
       name: "Project 1",
       title: "Project Title 1",
@@ -82,7 +94,6 @@ const Portfolio = () => {
       timestamp: "2022-09-05T08:15:00.000Z",
     },
   ];
-  
 
   return (
     <>
