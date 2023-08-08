@@ -36,8 +36,9 @@ const Tabs = ({ tabsData, projects }) => {
             <h2 className="relative text-2xl font-raleway font-medium text-gray-500 dark:text-white pl-5 before:content-[''] before:absolute before:w-[30px] rounded-lg before:mr-2 before:h-[2px] uppercase before:bg-[#ff0062] before:top-4 before:-left-5">
               Projects
             </h2>
-            <p className="my-5 italic text-sm">
-              Don't just take my words for it. See the comments and reviews.
+            <p className="my-5 italic text-center text-sm">
+              Here are some of the projects that showcase my expertise and
+              passion for what i do
             </p>
           </div>
           <nav className="mt-6 flex justify-center text-sm font-medium">

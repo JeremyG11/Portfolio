@@ -3,7 +3,7 @@ const SuccessAlert = ({ message, status }) => {
     <>
       {status === 200 ? (
         <div className="mt-12 mx-4 px-4 rounded-md border-l-4 border-green-500 bg-green-50 md:max-w-2xl md:mx-auto md:px-8">
-          <div className="flex justify-between py-3">
+          <div className="flex justify-between ">
             <div className="flex">
               <div>
                 <svg
@@ -24,7 +24,7 @@ const SuccessAlert = ({ message, status }) => {
         </div>
       ) : (
         <div className="mt-12 mx-4 px-4 rounded-md border-l-4 border-red-500 bg-red-50 md:max-w-2xl md:mx-auto md:px-8">
-          <div className="flex justify-between py-3">
+          <div className="flex justify-between ">
             <div className="flex">
               <div>
                 <svg

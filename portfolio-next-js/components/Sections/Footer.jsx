@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="absolute end-4 top-4 sm:end-6 sm:top-6 lg:end-8 lg:top-8">
           <Link
             className="inline-block  bg-gray-900 dark:bg-gray-100 p-1 dark:text-gray-800 text-white transition hover:bg-grsy-800 sm:p-3 lg:p-4"
-            href="#MainContent"
+            href="#home"
           >
             <span className="sr-only">Back to top</span>
 
@@ -42,44 +42,6 @@ const Footer = () => {
               and stay ahead in this rapidly evolving field.
             </p>
           </div>
-
-          {/* <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:mt-0 lg:justify-end lg:gap-12">
-            <li>
-              <Link
-                className="text-gray-700 dark:text-gray-500 transition hover:text-gray-700/75"
-                href="/"
-              >
-                About
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                className="text-gray-700 dark:text-gray-500 transition hover:text-gray-700/75"
-                href="/"
-              >
-                Services
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                className="text-gray-700 dark:text-gray-500 transition hover:text-gray-700/75"
-                href="/"
-              >
-                Projects
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                className="text-gray-700 dark:text-gray-500 transition hover:text-gray-700/75"
-                href="/"
-              >
-                Blog
-              </Link>
-            </li>
-          </ul> */}
         </div>
 
         <p className="mt-12 pt-3 text-center border-t-2 dark:border-gray-500 text-sm text-gray-500 lg:text-right">

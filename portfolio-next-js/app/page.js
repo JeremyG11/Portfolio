@@ -24,7 +24,7 @@ export default async function Home() {
   return (
     <>
       <Navbar />
-      <div className="mt-32 px-4 md:px-16">
+      <div id="home" className="pt-32 px-4 md:px-16">
         <div className="px-6 flex md:items-center md:px-0 lg:flex lg:items-center py-5">
           <div className=" font-montserrat max-w-4xl">
             <div className="relative dark:text-gray-300 lg:flex-grow md:max-w-xl text-lg lg:pl-16 md:pl-8 flex flex-col md:items-start md:text-left items-center text-center">

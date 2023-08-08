@@ -9,7 +9,8 @@ const Services = () => {
             My Services
           </h2>
           <p className="my-5 italic text-sm">
-            Don't just take my words for it. see the comments and reviews
+            I'm dedicated to providing top-notch services that cater to your
+            unique needs.{" "}
           </p>
         </div>
 

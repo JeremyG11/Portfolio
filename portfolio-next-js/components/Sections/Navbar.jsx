@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { Link as LinkScroll } from "react-scroll";
 import { ImDownload } from "react-icons/im";
 import ThemeButton from "../Elements/ThemeButton";
 
@@ -13,6 +14,7 @@ const Navbar = () => {
     { id: "contact", name: "Contact" },
   ];
 
+  const [activeLink, setActiveLink] = useState(null);
   const [toggleNav, setToggleNav] = useState(false);
 
   const handleToggleNav = () => {
@@ -55,11 +57,22 @@ const Navbar = () => {
                 />
 
                 <div className="w-full flex justify-between md:w-max md:px-0">
-                  <Link href="/">
+                  <LinkScroll
+                    activeClass="active"
+                    to="home"
+                    spy={true}
+                    smooth={true}
+                    duration={1000}
+                    onSetActive={() => {
+                      setActiveLink("home");
+                    }}
+                    scroll={false}
+                    className="block cursor-pointer md:px-2 lg:px-3 group mx-4 uppercase font-normal text-sm"
+                  >
                     <h2 className="text-3xl text-gray-900 dark:text-white font-montserrat font-black">
                       <span className="text-[#ff0063] ">?.</span>G
                     </h2>
-                  </Link>
+                  </LinkScroll>
 
                   <div className="flex items-center justify-center  md:hidden max-h-10">
                     <label
@@ -105,26 +118,127 @@ const Navbar = () => {
                   </div>
                   <div className="block p-2 h-full md:h-auto">
                     <ul className="space-y-8 font-medium md:flex md:space-y-0">
-                      {navElements.map((item, indx) => {
-                        return (
-                          <li
-                            key={indx}
-                            className="mx-4 uppercase font-normal text-sm "
+                      <LinkScroll
+                        activeClass="active"
+                        to="home"
+                        spy={true}
+                        smooth={true}
+                        duration={1000}
+                        onSetActive={() => {
+                          setActiveLink("home");
+                        }}
+                        scroll={false}
+                        className="block cursor-pointer md:px-2 lg:px-3 group mx-4 uppercase font-normal text-sm"
+                      >
+                        <div className="relative text-gray-600 before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left dark:before:bg-yelloe-500 before:mx-auto before:mt-auto before:rounded-full before:bg-yellow-800 before:transition before:scale-x-0 group-hover:before:scale-x-100">
+                          <span
+                            className={`${
+                              activeLink === "home"
+                                ? "text-yellow-300 dark:group-hover:text-yellow-300 "
+                                : "group-hover:text-yellow-700 dark:text-gray-300 dark:group-hover:text-yellow-300"
+                            } transition `}
                           >
-                            <Link
-                              scroll={false}
-                              href={`#${item.id}`}
-                              className="block md:px-2 lg:px-3 group"
-                            >
-                              <div className="relative text-gray-600 before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left dark:before:bg-yelloe-500 before:mx-auto before:mt-auto before:rounded-full before:bg-yellow-800 before:transition before:scale-x-0 group-hover:before:scale-x-100">
-                                <span className="transition group-hover:text-yellow-700 dark:text-gray-300 dark:group-hover:text-yellow-300">
-                                  {item.name}
-                                </span>
-                              </div>
-                            </Link>
-                          </li>
-                        );
-                      })}
+                            Home
+                          </span>
+                        </div>
+                      </LinkScroll>
+                      <LinkScroll
+                        activeClass="active"
+                        to="about"
+                        spy={true}
+                        smooth={true}
+                        duration={1000}
+                        onSetActive={() => {
+                          setActiveLink("about");
+                        }}
+                        scroll={false}
+                        className="block cursor-pointer md:px-2 lg:px-3 group mx-4 uppercase font-normal text-sm"
+                      >
+                        <div className="relative text-gray-600 before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left dark:before:bg-yelloe-500 before:mx-auto before:mt-auto before:rounded-full before:bg-yellow-800 before:transition before:scale-x-0 group-hover:before:scale-x-100">
+                          <span
+                            className={`${
+                              activeLink === "about"
+                                ? "text-yellow-300 dark:group-hover:text-yellow-300 "
+                                : "group-hover:text-yellow-700 dark:text-gray-300 dark:group-hover:text-yellow-300"
+                            } transition `}
+                          >
+                            About
+                          </span>
+                        </div>
+                      </LinkScroll>
+                      <LinkScroll
+                        activeClass="active"
+                        to="services"
+                        spy={true}
+                        smooth={true}
+                        duration={1000}
+                        onSetActive={() => {
+                          setActiveLink("services");
+                        }}
+                        scroll={false}
+                        className="block cursor-pointer md:px-2 lg:px-3 group mx-4 uppercase font-normal text-sm"
+                      >
+                        <div className="relative text-gray-600 before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left dark:before:bg-yelloe-500 before:mx-auto before:mt-auto before:rounded-full before:bg-yellow-800 before:transition before:scale-x-0 group-hover:before:scale-x-100">
+                          <span
+                            className={`${
+                              activeLink === "services"
+                                ? "text-yellow-300 dark:group-hover:text-yellow-300 "
+                                : "group-hover:text-yellow-700 dark:text-gray-300 dark:group-hover:text-yellow-300"
+                            } transition `}
+                          >
+                            Services
+                          </span>
+                        </div>
+                      </LinkScroll>
+                      <LinkScroll
+                        activeClass="active"
+                        to="portfolio"
+                        spy={true}
+                        smooth={true}
+                        duration={1000}
+                        onSetActive={() => {
+                          setActiveLink("portfolio");
+                        }}
+                        scroll={false}
+                        className="block cursor-pointer md:px-2 lg:px-3 group mx-4 uppercase font-normal text-sm"
+                      >
+                        <div className="relative text-gray-600 before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left dark:before:bg-yelloe-500 before:mx-auto before:mt-auto before:rounded-full before:bg-yellow-800 before:transition before:scale-x-0 group-hover:before:scale-x-100">
+                          <span
+                            className={`${
+                              activeLink === "portfolio"
+                                ? "text-yellow-300 dark:group-hover:text-yellow-300 "
+                                : "group-hover:text-yellow-700 dark:text-gray-300 dark:group-hover:text-yellow-300"
+                            } transition `}
+                          >
+                            Portfolio
+                          </span>
+                        </div>
+                      </LinkScroll>
+
+                      <LinkScroll
+                        activeClass="active"
+                        to="contact"
+                        spy={true}
+                        smooth={true}
+                        duration={1000}
+                        onSetActive={() => {
+                          setActiveLink("contact");
+                        }}
+                        scroll={false}
+                        className="cursor-pointer block md:px-2 lg:px-3 group mx-4 uppercase font-normal text-sm"
+                      >
+                        <div className="relative text-gray-600 before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left dark:before:bg-yelloe-500 before:mx-auto before:mt-auto before:rounded-full before:bg-yellow-800 before:transition before:scale-x-0 group-hover:before:scale-x-100">
+                          <span
+                            className={`${
+                              activeLink === "contact"
+                                ? "text-yellow-300 dark:group-hover:text-yellow-300 "
+                                : "group-hover:text-yellow-700 dark:text-gray-300 dark:group-hover:text-yellow-300"
+                            } transition `}
+                          >
+                            Contact
+                          </span>
+                        </div>
+                      </LinkScroll>
                     </ul>
                   </div>
                   <div className="w-full gap-y-4 md:w-max md:gap-y-0 md:gap-x-4 flex md:flex-row flex-col font-montserrat">

@@ -73,7 +73,10 @@ const Testimonials = ({ testimonials }) => {
               </div>
             </div>
           </div>
-          {/* <Swipper /> */}
+          <Swipper
+            goToNextSlide={goToNextSlide}
+            goToPreviousSlide={goToPreviousSlide}
+          />
           <ReviewModel toggler={toggler} setToggler={setToggler} />
         </div>
       </div>

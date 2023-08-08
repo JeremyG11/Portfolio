@@ -66,7 +66,7 @@ const SkillsAndExperience = () => {
                   <MdOutlineDoneAll className="w-5 h-5 text-white" />
                 </span>
               </div>
-              <div className="py-6 -mt-5 lg:px-12 rounded">
+              <div className="p-6 -mt-5 lg:px-12 rounded">
                 <h3 className="ml-3 relative font-raleway tracking-wider text-sm text-gray-500 dark:text-white pl-5 before:content-[''] before:absolute before:w-[24px] rounded-lg before:mr-2 before:h-[2px] uppercase before:bg-[#ff0062] before:top-2 before:-left-5">
                   Databases
                 </h3>

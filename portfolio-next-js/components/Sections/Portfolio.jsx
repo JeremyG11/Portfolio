@@ -9,6 +9,7 @@ async function getProjects() {
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
+  
   return res.json();
 }
 
@@ -20,6 +21,7 @@ const Portfolio = async () => {
     { title: "Web Apps", content: "Content for Tab 3" },
     { title: "Latest", content: "Content for Tab 4" },
   ];
+   setTimeout(()=>{console.log(projects);}, 3000);
   const project = [
     {
       name: "Project 1",

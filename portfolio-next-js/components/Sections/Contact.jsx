@@ -5,7 +5,7 @@ import emailjs from "@emailjs/browser";
 import { TfiLinkedin } from "react-icons/tfi";
 import { IoLogoTwitter, IoLogoGithub } from "react-icons/io";
 import { TbBrandDribbbleFilled } from "react-icons/tb";
-import { BiLogoTelegram } from "react-icons/bi";
+import { BiLogoTelegram, BiLoaderCircle } from "react-icons/bi";
 import SuccessAlert from "../Elements/SuccessAlert";
 
 const Contact = () => {
@@ -52,12 +52,14 @@ const Contact = () => {
           }
         }
       );
-    // formRef.current.reset();
+    formRef.current.reset();
   };
 
-  useEffect(() => {}, [message]);
+  useEffect(() => {
+    
+  }, [message]);
   return (
-    <section className=" my-16 px-4 md:px-16 bg-gray-50 dark:bg-gray-800 pt-10">
+    <section className=" pt-32 px-4 md:px-16 bg-gray-50 dark:bg-gray-800">
       <div className="lg:grid lg:min-h-screen lg:grid-cols-12 ">
         <section className="relative flex  items-end bg-gray-900 lg:col-span-5 lg:h-5/6 xl:col-span-6">
           <img
@@ -172,7 +174,15 @@ const Contact = () => {
                   </span>
 
                   <span className="shrink-0 rounded-full  text-white dark:text-black group-hover:text-black dark:group-hover:text-white  group-active:text-black  dark:group-active:text-white">
-                    <BiLogoTelegram className="text-2xl group-active:text-black dark:group-active:text-white  uppercase" />
+                    {loading ? (
+                      <>
+                        <BiLoaderCircle className="aninate-spin text-2xl group-active:text-black dark:group-active:text-white  uppercase" />
+                      </>
+                    ) : (
+                      <>
+                        <BiLogoTelegram className="text-2xl group-active:text-black dark:group-active:text-white  uppercase" />
+                      </>
+                    )}
                   </span>
                 </button>
               </form>

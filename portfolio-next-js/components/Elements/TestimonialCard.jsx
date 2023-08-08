@@ -9,7 +9,7 @@ const TestimonialCard = ({ testimonial }) => {
             <LiaQuoteRightSolid className="text-7xl italic " />
           </div>
 
-          <div>
+          <div className="h-32 py-1 line-clamp-4">
             <p className="mt-4 leading-relaxed text-gray-500 dark:text-gray-200 italic text-center">
               {testimonial.reviewContent}
             </p>
