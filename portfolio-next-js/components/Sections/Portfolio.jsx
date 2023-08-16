@@ -26,7 +26,7 @@ const Portfolio = async () => {
     {
       name: "Project 1",
       title: "Project Title 1",
-      imgUrl:
+      ImageUrl:
         "https://images.unsplash.com/photo-1688917169732-834612d59842?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
       type: "frontend",
       description: "Project 1 description",
@@ -35,7 +35,7 @@ const Portfolio = async () => {
     {
       name: "Project 2",
       title: "Project Title 2",
-      imgUrl:
+      ImageUrl:
         "https://images.unsplash.com/photo-1513364776144-60967b0f800f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YXJ0fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
       type: "designs",
       description: "Project 2 description",
@@ -44,7 +44,7 @@ const Portfolio = async () => {
     {
       name: "Project 3",
       title: "Project Title 3",
-      imgUrl:
+      ImageUrl:
         "https://images.unsplash.com/photo-1688383213635-9bc2fc25103d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
       type: "frontend",
       description: "Project 3 description",
@@ -53,7 +53,7 @@ const Portfolio = async () => {
     {
       name: "Project 4",
       title: "Project Title 4",
-      imgUrl:
+      ImageUrl:
         "https://images.unsplash.com/photo-1689154345860-fa9dab2f92c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
       type: "design",
       description: "Project 4 description",
@@ -62,7 +62,7 @@ const Portfolio = async () => {
     {
       name: "Project 5",
       title: "Project Title 5",
-      imgUrl:
+      ImageUrl:
         "https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGFydHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
       type: "backend",
       description: "Project 5 description",
@@ -71,7 +71,7 @@ const Portfolio = async () => {
     {
       name: "Project 1",
       title: "Project Title 1",
-      imgUrl:
+      ImageUrl:
         "https://images.unsplash.com/photo-1688917169732-834612d59842?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
       type: "frontend",
       description: "Project 1 description",
@@ -80,7 +80,7 @@ const Portfolio = async () => {
     {
       name: "Project 2",
       title: "Project Title 2",
-      imgUrl:
+      ImageUrl:
         "https://images.unsplash.com/photo-1513364776144-60967b0f800f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YXJ0fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
       type: "designs",
       description: "Project 2 description",
@@ -89,7 +89,7 @@ const Portfolio = async () => {
     {
       name: "Project 3",
       title: "Project Title 3",
-      imgUrl:
+      ImageUrl:
         "https://images.unsplash.com/photo-1688383213635-9bc2fc25103d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
       type: "frontend",
       description: "Project 3 description",

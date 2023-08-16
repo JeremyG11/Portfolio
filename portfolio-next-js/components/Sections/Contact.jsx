@@ -1,7 +1,9 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import emailjs from "@emailjs/browser";
+import desk from "../../public/photo1.jpg"
 import { TfiLinkedin } from "react-icons/tfi";
 import { IoLogoTwitter, IoLogoGithub } from "react-icons/io";
 import { TbBrandDribbbleFilled } from "react-icons/tb";
@@ -62,10 +64,12 @@ const Contact = () => {
     <section className=" pt-32 px-4 md:px-16 bg-gray-50 dark:bg-gray-800">
       <div className="lg:grid lg:min-h-screen lg:grid-cols-12 ">
         <section className="relative flex  items-end bg-gray-900 lg:col-span-5 lg:h-5/6 xl:col-span-6">
-          <img
-            alt="Night"
-            src="https://images.unsplash.com/photo-1421757295538-9c80958e75b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
-            className="absolute bg-white  inset-0 h-full w-full object-cover opacity-80"
+          <Image
+            alt="Contact image"
+            width={100}
+            height={50}
+            className="absolute bg-white  inset-0 h-full w-full object-cover"
+            src={desk}
           />
 
           <div className="hidden lg:relative lg:block lg:p-12 bg-zinc-800 opacity-80">

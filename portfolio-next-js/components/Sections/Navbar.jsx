@@ -1,18 +1,13 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
+import Image from "next/image";
 import { Link as LinkScroll } from "react-scroll";
 import { ImDownload } from "react-icons/im";
 import ThemeButton from "../Elements/ThemeButton";
+import myImg from '../../public/gatwech-pic.jpg'
 
 const Navbar = () => {
-  const navElements = [
-    { id: "", name: "Home" },
-    { id: "about", name: "About" },
-    { id: "portfolio", name: "Portfolio" },
-    { id: "services", name: "Service" },
-    { id: "contact", name: "Contact" },
-  ];
+  
 
   const [activeLink, setActiveLink] = useState(null);
   const [toggleNav, setToggleNav] = useState(false);
@@ -66,7 +61,7 @@ const Navbar = () => {
                     onSetActive={() => {
                       setActiveLink("home");
                     }}
-                    scroll={false}
+                    scroll="false"
                     className="block cursor-pointer md:px-2 lg:px-3 group mx-4 uppercase font-normal text-sm"
                   >
                     <h2 className="text-3xl text-gray-900 dark:text-white font-montserrat font-black">
@@ -74,15 +69,20 @@ const Navbar = () => {
                     </h2>
                   </LinkScroll>
 
-                  <div className="flex items-center justify-center  md:hidden max-h-10">
+                  <div className="px-8 flex items-center justify-center  md:hidden max-h-10 ">
                     <label
                       role="button"
                       htmlFor="toggle_nav"
-                      className="relative z-40 px-2 py-3 sm:-mr-6"
+                      className="relative z-40 px-2 sm:-mr-6"
                     >
                       <div
                         id="line"
                         className="m-auto h-0.5 w-6 rounded bg-sky-900 dark:bg-gray-300 transition duration-300"
+                      ></div>
+
+                      <div
+                        id="line2"
+                        className="m-auto mt-2 h-0.5 w-6 rounded bg-sky-900 dark:bg-gray-300 transition duration-300"
                       ></div>
                       <div
                         id="line2"
@@ -101,17 +101,19 @@ const Navbar = () => {
                 ></label>
 
                 <div
-                  className={`flex z-50 flex-col md:flex-row lg:justify-between md:items-center gap-y-4 bg-white md:w-11/12 md:gap-y-4 md:p-0 md:bg-transparent lg:w-10/12 fixed top-0 ${
-                    toggleNav ? "left-0" : "-left-full"
+                  className={`flex z-50 flex-col md:flex-row lg:justify-between md:items-center gap-y-4 bg-white dark:bg-gray-800 md:w-11/12 md:gap-y-4 md:p-0 md:bg-transparent lg:w-10/12 fixed top-0 ${
+                    toggleNav ? "left-0 p-8" : "-left-full"
                   } transition-all duration-500 peer-checked:left-0 max-w-sm h-full md:left-0 md:h-auto w-4/5 md:max-w-none md:relative lg:first-letter:top-0`}
                 >
                   <div className="flex md:hidden w-full pb-5">
                     <a href="#" aria-label="logo">
                       <div className="flex items-center gap-x-6">
-                        <img
+                        <Image
                           className="object-cover w-16 h-16 rounded-full ring ring-gray-300 dark:ring-gray-600"
-                          src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=4&w=880&h=880&q=100"
+                          src={myImg}
                           alt=""
+                          width={100}
+                          height={100}
                         />
                       </div>
                     </a>
@@ -127,7 +129,7 @@ const Navbar = () => {
                         onSetActive={() => {
                           setActiveLink("home");
                         }}
-                        scroll={false}
+                        scroll="false"
                         className="block cursor-pointer md:px-2 lg:px-3 group mx-4 uppercase font-normal text-sm"
                       >
                         <div className="relative text-gray-600 before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left dark:before:bg-yelloe-500 before:mx-auto before:mt-auto before:rounded-full before:bg-yellow-800 before:transition before:scale-x-0 group-hover:before:scale-x-100">
@@ -151,7 +153,7 @@ const Navbar = () => {
                         onSetActive={() => {
                           setActiveLink("about");
                         }}
-                        scroll={false}
+                        scroll="false"
                         className="block cursor-pointer md:px-2 lg:px-3 group mx-4 uppercase font-normal text-sm"
                       >
                         <div className="relative text-gray-600 before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left dark:before:bg-yelloe-500 before:mx-auto before:mt-auto before:rounded-full before:bg-yellow-800 before:transition before:scale-x-0 group-hover:before:scale-x-100">
@@ -175,7 +177,7 @@ const Navbar = () => {
                         onSetActive={() => {
                           setActiveLink("services");
                         }}
-                        scroll={false}
+                        scroll="false"
                         className="block cursor-pointer md:px-2 lg:px-3 group mx-4 uppercase font-normal text-sm"
                       >
                         <div className="relative text-gray-600 before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left dark:before:bg-yelloe-500 before:mx-auto before:mt-auto before:rounded-full before:bg-yellow-800 before:transition before:scale-x-0 group-hover:before:scale-x-100">
@@ -199,7 +201,7 @@ const Navbar = () => {
                         onSetActive={() => {
                           setActiveLink("portfolio");
                         }}
-                        scroll={false}
+                        scroll="false"
                         className="block cursor-pointer md:px-2 lg:px-3 group mx-4 uppercase font-normal text-sm"
                       >
                         <div className="relative text-gray-600 before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left dark:before:bg-yelloe-500 before:mx-auto before:mt-auto before:rounded-full before:bg-yellow-800 before:transition before:scale-x-0 group-hover:before:scale-x-100">
@@ -224,7 +226,7 @@ const Navbar = () => {
                         onSetActive={() => {
                           setActiveLink("contact");
                         }}
-                        scroll={false}
+                        scroll="false"
                         className="cursor-pointer block md:px-2 lg:px-3 group mx-4 uppercase font-normal text-sm"
                       >
                         <div className="relative text-gray-600 before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left dark:before:bg-yelloe-500 before:mx-auto before:mt-auto before:rounded-full before:bg-yellow-800 before:transition before:scale-x-0 group-hover:before:scale-x-100">

@@ -1,10 +1,6 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {}
-
+// next.config.js
 module.exports = {
   images: {
-    loader: "cloudinary",
-    path: "https://res.cloudinary.com/myaccount",
+    domains: ["images.unsplash.com"], 
   },
 };
-module.exports = nextConfig

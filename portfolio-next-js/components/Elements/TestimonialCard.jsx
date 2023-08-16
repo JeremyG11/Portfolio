@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { LiaQuoteRightSolid } from "react-icons/lia";
 const TestimonialCard = ({ testimonial }) => {
   return (
@@ -18,10 +19,12 @@ const TestimonialCard = ({ testimonial }) => {
 
         <div className="flex gap-4 items-center mt-6">
           <div className="flex-none w-24 h-24">
-            <img
-              src="https://randomuser.me/api/portraits/women/63.jpg"
+            <Image
+              src="https://images.unsplash.com/photo-1688917169732-834612d59842?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
               className="w-full h-full rounded-full"
               alt=""
+              width={100}
+              height={100}
             />
           </div>
           <div className="flex justify-center">

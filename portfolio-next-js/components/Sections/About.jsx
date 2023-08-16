@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
 import { ImDownload } from "react-icons/im";
 
@@ -48,7 +49,7 @@ const About = () => {
         </div>
         <div className="mx-auto invisible md:visible">
           <div className="group relative rounded-full  space-y-6 overflow-hidden">
-            <img
+            <Image
               className="mx-auto h-56 w-56 grayscale object-cover object-top ransition duration-500 group-hover:scale-105 group-hover:grayscale-0"
               src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
               alt="Gatwech"

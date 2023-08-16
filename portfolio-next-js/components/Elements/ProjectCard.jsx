@@ -33,8 +33,8 @@ const ProjectCard = ({ project }) => {
         </svg>
       </button>
 
-      <img
-        src={project.imgUrl}
+      <Image
+        src={project.ImageUrl}
         alt=""
         className="w-full object-cover transition duration-500 group-hover:scale-105"
       />
