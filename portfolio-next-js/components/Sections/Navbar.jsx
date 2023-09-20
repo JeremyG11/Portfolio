@@ -69,7 +69,7 @@ const Navbar = () => {
                     </h2>
                   </LinkScroll>
 
-                  <div className="px-8 flex items-center justify-center  md:hidden max-h-10 ">
+                  <div className="px-0 flex items-center justify-center  md:hidden max-h-10 ">
                     <label
                       role="button"
                       htmlFor="toggle_nav"

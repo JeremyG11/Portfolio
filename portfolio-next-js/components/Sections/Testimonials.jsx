@@ -37,7 +37,7 @@ const Testimonials = ({ testimonials }) => {
               Testimonials
             </h2>
             <p className="my-5 italic text-sm">
-              Don't just take my words for it. see the comments and reviews
+              Don&apos;t just take my words for it. see the comments and reviews
             </p>
             <p className="mt-4 text-base leading-7 font-assistant text-gray-500 dark:text-gray-300">
               Passioned for creating elegant, modern, user-friendly websites.

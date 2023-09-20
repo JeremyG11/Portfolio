@@ -10,7 +10,7 @@ const SkillsAndExperience = () => {
           My Skills and Experience
         </h2>
         <p className="my-5 italic text-sm">
-          Don't just take my words for it. see the comments and reviews
+          Don&apos;t just take my words for it. see the comments and reviews
         </p>
       </div>
       <div className="flex items-center justify-center mx-auto">

@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import { IoLogoGithub } from "react-icons/io";
 import { AiOutlineDeploymentUnit } from "react-icons/ai";

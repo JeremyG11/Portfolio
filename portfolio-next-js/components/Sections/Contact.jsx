@@ -66,8 +66,7 @@ const Contact = () => {
         <section className="relative flex  items-end bg-gray-900 lg:col-span-5 lg:h-5/6 xl:col-span-6">
           <Image
             alt="Contact image"
-            width={100}
-            height={50}
+            fill
             className="absolute bg-white  inset-0 h-full w-full object-cover"
             src={desk}
           />
@@ -123,8 +122,8 @@ const Contact = () => {
                   contact Me
                 </h2>
                 <p className="mt-2 font-medium font-assistant italic text-gray-500">
-                  I'd love to hear from you! Please leave a message and I'll be
-                  back to you in no time.
+                  I&apos;d love to hear from you! Please leave a message and
+                  I&apos;ll be back to you in no time.
                 </p>
               </div>
               <form

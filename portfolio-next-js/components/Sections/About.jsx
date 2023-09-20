@@ -12,7 +12,7 @@ const About = () => {
             About Me
           </h2>
           <p className="my-5 italic text-sm">
-            I'm a skilled junior Full Stack Developer based in Addis Ababa,
+            I&apos;m a skilled junior Full Stack Developer based in Addis Ababa,
             Ethiopia
           </p>
           <p className="mt-4 text-base leading-7 font-assistant text-gray-500 dark:text-gray-300">

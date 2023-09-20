@@ -9,8 +9,8 @@ const Services = () => {
             My Services
           </h2>
           <p className="my-5 italic text-sm">
-            I'm dedicated to providing top-notch services that cater to your
-            unique needs.{" "}
+            I&apos;m dedicated to providing top-notch services that cater to
+            your unique needs.{" "}
           </p>
         </div>
 
@@ -73,10 +73,10 @@ const Services = () => {
             </h2>
 
             <p className="mt-4 text-base leading-7 font-assistant text-gray-500 dark:text-gray-300">
-              I'm versatile Full Stack Developer, Proficient in both front-end
-              and back-end technologies, I possess expertise in building
-              intuitive user interfaces, designing efficient databases, and
-              implementing secure APIs
+              I&apos;m versatile Full Stack Developer, Proficient in both
+              front-end and back-end technologies, I possess expertise in
+              building intuitive user interfaces, designing efficient databases,
+              and implementing secure APIs
             </p>
           </Link>
           <Link

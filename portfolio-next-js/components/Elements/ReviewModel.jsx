@@ -102,7 +102,7 @@ const ReviewModel = ({ toggler, setToggler }) => {
                 <div>
                   <label
                     className="block mb-2 text-gray-700 "
-                    htmlFor="username"
+                    htmlFor="name"
                   >
                     Your Name
                   </label>
@@ -153,9 +153,10 @@ const ReviewModel = ({ toggler, setToggler }) => {
                 <div className="col-span-2">
                   <label
                     className="text-gray-700  "
-                    htmlFor="passwordConfirmation"
+                    htmlFor="socailLink"
                   >
-                    if you don't mind sharing social media link. e.g Linkdin{" "}
+                    if you don&apos;t mind sharing social media link. e.g
+                    Linkdin{" "}
                   </label>
                   <SocialMediaLinks links={links} setLinks={setLinks} />
                 </div>

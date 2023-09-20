@@ -46,10 +46,10 @@ const Tabs = ({ tabsData, projects }) => {
               <div key={indx}>
                 <button
                   onClick={() => handleTabClick(indx)}
-                  className={`md:mx-10 font-montserrat uppercase text-sm cursor-pointer mr-6 py-3 ${
+                  className={`md:mx-10 font-montserrat uppercase  text-xs cursor-pointer mr-6 py-3 ${
                     indx === activeTab
-                      ? "font-semiblod relative font-medium after:content-[''] after:absolute after:w-[100%] text-[#D31717] after:transition-all hover:after:w-[100%] after:h-[2px] after:bg-[#D31717] hover:text-[#D31717] after:bottom-2 after:left-0"
-                      : "relative font-semiblod text-gray-500 dark:text-gray-20 after:content-[''] after:absolute after:w-0 after:transition-all hover:after:w-[100%] after:h-[2px] after:bg-[#D31717] hover:text-[#D31717] after:bottom-2 after:left-0"
+                      ? " md:font-semiblod relative font-medium after:content-[''] after:absolute after:w-[100%] text-[#D31717] after:transition-all hover:after:w-[100%] after:h-[2px] after:bg-[#D31717] hover:text-[#D31717] after:bottom-2 after:left-0"
+                      : "relative md:font-semiblod text-gray-500 dark:text-gray-20 after:content-[''] after:absolute after:w-0 after:transition-all hover:after:w-[100%] after:h-[2px] after:bg-[#D31717] hover:text-[#D31717] after:bottom-2 after:left-0"
                   }`}
                 >
                   {tab.title}

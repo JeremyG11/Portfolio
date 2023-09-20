@@ -29,7 +29,7 @@ export default async function Home() {
           <div className=" font-montserrat max-w-4xl">
             <div className="relative dark:text-gray-300 lg:flex-grow md:max-w-xl text-lg lg:pl-16 md:pl-8 flex flex-col md:items-start md:text-left items-center text-center">
               <h2 className="text-center relative text-xl lg:text-2xl dark:text-white pl-5 before:content-[''] before:absolute before:w-[3px] rounded-lg before:mr-2 before:h-full lg:before:h-10 uppercase before:bg-[#ff0062] before:-bottom-0 lg:before:-bottom-1 before:left-0">
-                Hello, I'm Gatwech Nguth
+                Hello, I&apos;m Gatwech Nguth
               </h2>
               <p className="my-5 text-xl xl:text-4xl font-medium font-montserrat tracking-[3px] lg:tracking-[6px] whitespace-nowrap uppercase">
                 Full Stack Developer
